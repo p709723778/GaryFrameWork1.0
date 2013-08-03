@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Gary. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DefineImport.h"
 
 @class ViewController;
 

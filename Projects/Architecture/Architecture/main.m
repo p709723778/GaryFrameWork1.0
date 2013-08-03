@@ -13,6 +13,9 @@
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
+        NSLog(@"%@",SERVER_API(USER_LOGING));
+        
+        NSLog(@"%d",IOS6_OR_LATER);
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

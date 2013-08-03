@@ -9,8 +9,11 @@
 #import "AppDelegate.h"
 
 #import "ViewController.h"
+#import "GaryPersonalLog.h"
 
 @implementation AppDelegate
+
+AS_SINGLETON(AppDelegate)
 
 - (void)dealloc
 {
@@ -21,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //本人版权日志输出
+    [GaryPersonalLog outPutPersonalLog];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
