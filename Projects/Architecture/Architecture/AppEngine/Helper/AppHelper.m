@@ -12,7 +12,7 @@
 
 
 /**
- *	@brief	判断应用是否第一次启动
+ *	@brief	判断App是否第一次启动
  *  
  *	@return	YES Or NO
  */
