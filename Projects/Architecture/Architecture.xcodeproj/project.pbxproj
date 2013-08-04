@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E758E0217AE91B00000916E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E758E0417AE91B00000916E /* Localizable.strings */; };
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
 		4E8A3D7A17AD07C400F49E8D /* UIDevice+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */; };
 		4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */; };
@@ -85,6 +86,8 @@
 
 /* Begin PBXFileReference section */
 		4E758DF817AE8DAE0000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		4E758E0317AE91B00000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E8A3D5E17ACC45500F49E8D /* DefineImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineImport.h; sourceTree = "<group>"; };
 		4E8A3D6217ACCD6200F49E8D /* AppConfigManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigManage.h; sourceTree = "<group>"; };
 		4E8A3D6317ACDC9100F49E8D /* RequestAddressManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAddressManage.h; sourceTree = "<group>"; };
@@ -547,6 +550,7 @@
 				4EBB1ADE17ACBB0D0080ED23 /* Default.png */,
 				4EBB1AE017ACBB0D0080ED23 /* Default@2x.png */,
 				4EBB1AE217ACBB0D0080ED23 /* Default-568h@2x.png */,
+				4E758E0417AE91B00000916E /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -693,6 +697,7 @@
 				4EAC4BFB17AE82C8004A8E95 /* betting.mp3 in Resources */,
 				4EAC4BFC17AE82C8004A8E95 /* random.mp3 in Resources */,
 				4EAC4BFD17AE82C8004A8E95 /* tap.aif in Resources */,
+				4E758E0217AE91B00000916E /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,6 +788,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4E758E0417AE91B00000916E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E758E0317AE91B00000916E /* zh-Hans */,
+				4E758E0517AE91B40000916E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		4EBB1AD517ACBB0D0080ED23 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

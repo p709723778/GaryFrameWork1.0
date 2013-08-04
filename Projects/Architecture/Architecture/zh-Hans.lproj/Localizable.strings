@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Architecture
+
+  Created by 蒲晓涛 on 8/4/13.
+  Copyright (c) 2013 Gary. All rights reserved.
+*/
+"enter" = "进入";
+"demo" = "这是一个例子";
