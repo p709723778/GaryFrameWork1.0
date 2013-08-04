@@ -15,5 +15,8 @@
 
 //获取设备UDID 库
 #import "OpenUDID.h"
+#import "AFNetworking.h"
+#import "Reachability.h"
+#import "SoundManager.h"
 
 #endif

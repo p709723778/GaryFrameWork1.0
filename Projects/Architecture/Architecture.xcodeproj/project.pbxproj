@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E758E0217AE91B00000916E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E758E0417AE91B00000916E /* Localizable.strings */; };
+		4E758E1117AEA3100000916E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E758E1017AEA3100000916E /* Reachability.m */; };
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
 		4E8A3D7A17AD07C400F49E8D /* UIDevice+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */; };
 		4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */; };
@@ -88,6 +89,8 @@
 		4E758DF817AE8DAE0000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4E758E0317AE91B00000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4E758E0F17AEA3100000916E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		4E758E1017AEA3100000916E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4E8A3D5E17ACC45500F49E8D /* DefineImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineImport.h; sourceTree = "<group>"; };
 		4E8A3D6217ACCD6200F49E8D /* AppConfigManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigManage.h; sourceTree = "<group>"; };
 		4E8A3D6317ACDC9100F49E8D /* RequestAddressManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAddressManage.h; sourceTree = "<group>"; };
@@ -232,6 +235,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E758E0E17AEA3100000916E /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				4E758E0F17AEA3100000916E /* Reachability.h */,
+				4E758E1017AEA3100000916E /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		4E8A3D5D17ACC42E00F49E8D /* DefineImportManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,6 +333,7 @@
 		4EAC4B5017AE5C34004A8E95 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				4E758E0E17AEA3100000916E /* Reachability */,
 				4EAC4B7017AE6715004A8E95 /* AFNetworking */,
 			);
 			path = NetWork;
@@ -766,6 +779,7 @@
 				4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */,
 				4EAC4BD717AE7D7A004A8E95 /* UIButton+Category.m in Sources */,
 				4EAC4C0217AE82D8004A8E95 /* SoundManager.m in Sources */,
+				4E758E1117AEA3100000916E /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

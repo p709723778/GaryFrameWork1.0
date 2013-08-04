@@ -7,7 +7,6 @@
 //
 
 #import "UIButton+Category.h"
-#import "SoundManager.h"
 
 @implementation UIButton (Category)
 
