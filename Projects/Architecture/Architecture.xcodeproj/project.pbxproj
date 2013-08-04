@@ -38,6 +38,18 @@
 		4EAC4BCA17AE7395004A8E95 /* UIView+Introspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BBD17AE7395004A8E95 /* UIView+Introspector.m */; };
 		4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BBF17AE7395004A8E95 /* UIWindow+Introspector.m */; };
 		4EAC4BCD17AE73AD004A8E95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */; };
+		4EAC4BD717AE7D7A004A8E95 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BD617AE7D7A004A8E95 /* UIButton+Category.m */; };
+		4EAC4BE517AE8070004A8E95 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4BE417AE8070004A8E95 /* AVFoundation.framework */; };
+		4EAC4BEE17AE82B8004A8E95 /* iPad_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BE817AE82B8004A8E95 /* iPad_Resource */; };
+		4EAC4BEF17AE82B8004A8E95 /* sound1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BEA17AE82B8004A8E95 /* sound1.caf */; };
+		4EAC4BF017AE82B8004A8E95 /* sound2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BEB17AE82B8004A8E95 /* sound2.caf */; };
+		4EAC4BF117AE82B8004A8E95 /* track1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BEC17AE82B8004A8E95 /* track1.caf */; };
+		4EAC4BF217AE82B8004A8E95 /* track2.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BED17AE82B8004A8E95 /* track2.caf */; };
+		4EAC4BFA17AE82C8004A8E95 /* iPhone_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BF517AE82C8004A8E95 /* iPhone_Resource */; };
+		4EAC4BFB17AE82C8004A8E95 /* betting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BF717AE82C8004A8E95 /* betting.mp3 */; };
+		4EAC4BFC17AE82C8004A8E95 /* random.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BF817AE82C8004A8E95 /* random.mp3 */; };
+		4EAC4BFD17AE82C8004A8E95 /* tap.aif in Resources */ = {isa = PBXBuildFile; fileRef = 4EAC4BF917AE82C8004A8E95 /* tap.aif */; };
+		4EAC4C0217AE82D8004A8E95 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4C0117AE82D8004A8E95 /* SoundManager.m */; };
 		4EBB1ACD17ACBB0D0080ED23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */; };
 		4EBB1ACF17ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AD117ACBB0D0080ED23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1AD017ACBB0D0080ED23 /* CoreGraphics.framework */; };
@@ -59,8 +71,6 @@
 		4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7017AE366F003B9B42 /* RegularVerification.m */; };
 		4ECD3F7917AE466A003B9B42 /* iPad_View in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7817AE466A003B9B42 /* iPad_View */; };
 		4ECD3F7B17AE4680003B9B42 /* iPhone_View in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7A17AE4680003B9B42 /* iPhone_View */; };
-		4ECD3F7D17AE46BF003B9B42 /* iPad_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */; };
-		4ECD3F7F17AE46CA003B9B42 /* iPhone_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +152,20 @@
 		4EAC4BBE17AE7395004A8E95 /* UIWindow+Introspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Introspector.h"; sourceTree = "<group>"; };
 		4EAC4BBF17AE7395004A8E95 /* UIWindow+Introspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Introspector.m"; sourceTree = "<group>"; };
 		4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4EAC4BD517AE7D7A004A8E95 /* UIButton+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
+		4EAC4BD617AE7D7A004A8E95 /* UIButton+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		4EAC4BE417AE8070004A8E95 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4EAC4BE817AE82B8004A8E95 /* iPad_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_Resource; sourceTree = "<group>"; };
+		4EAC4BEA17AE82B8004A8E95 /* sound1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound1.caf; sourceTree = "<group>"; };
+		4EAC4BEB17AE82B8004A8E95 /* sound2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound2.caf; sourceTree = "<group>"; };
+		4EAC4BEC17AE82B8004A8E95 /* track1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = track1.caf; sourceTree = "<group>"; };
+		4EAC4BED17AE82B8004A8E95 /* track2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = track2.caf; sourceTree = "<group>"; };
+		4EAC4BF517AE82C8004A8E95 /* iPhone_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPhone_Resource; sourceTree = "<group>"; };
+		4EAC4BF717AE82C8004A8E95 /* betting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = betting.mp3; sourceTree = "<group>"; };
+		4EAC4BF817AE82C8004A8E95 /* random.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = random.mp3; sourceTree = "<group>"; };
+		4EAC4BF917AE82C8004A8E95 /* tap.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tap.aif; sourceTree = "<group>"; };
+		4EAC4C0017AE82D8004A8E95 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		4EAC4C0117AE82D8004A8E95 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		4EBB1AC917ACBB0D0080ED23 /* Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,8 +197,6 @@
 		4ECD3F7017AE366F003B9B42 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
 		4ECD3F7817AE466A003B9B42 /* iPad_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_View; sourceTree = "<group>"; };
 		4ECD3F7A17AE4680003B9B42 /* iPhone_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPhone_View; sourceTree = "<group>"; };
-		4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_Resource; sourceTree = "<group>"; };
-		4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPhone_Resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAC4BE517AE8070004A8E95 /* AVFoundation.framework in Frameworks */,
 				4EAC4BCD17AE73AD004A8E95 /* QuartzCore.framework in Frameworks */,
 				4EAC4B9417AE695C004A8E95 /* MobileCoreServices.framework in Frameworks */,
 				4EAC4B9017AE6874004A8E95 /* Security.framework in Frameworks */,
@@ -216,6 +239,7 @@
 		4E8A3D6D17ACF33100F49E8D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC4BFE17AE82D7004A8E95 /* Sound */,
 				4EAC4B5017AE5C34004A8E95 /* NetWork */,
 				4E8A3D6E17ACF36100F49E8D /* Device */,
 				4E8A3D7317ACF65900F49E8D /* Vendor.h */,
@@ -250,6 +274,8 @@
 				4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */,
 				4ECD3F6617AE2F9C003B9B42 /* NSString+Category.h */,
 				4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */,
+				4EAC4BD517AE7D7A004A8E95 /* UIButton+Category.h */,
+				4EAC4BD617AE7D7A004A8E95 /* UIButton+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -266,26 +292,10 @@
 		4E8A3D8417AD0F8E00F49E8D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				4E8A3D8517AD0F8E00F49E8D /* iPad_Resource */,
-				4E8A3D8617AD0F8E00F49E8D /* iPhone_Resource */,
+				4EAC4BF317AE82C8004A8E95 /* iPhone_Resource */,
+				4EAC4BE617AE82B8004A8E95 /* iPad_Resource */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		4E8A3D8517AD0F8E00F49E8D /* iPad_Resource */ = {
-			isa = PBXGroup;
-			children = (
-				4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */,
-			);
-			path = iPad_Resource;
-			sourceTree = "<group>";
-		};
-		4E8A3D8617AD0F8E00F49E8D /* iPhone_Resource */ = {
-			isa = PBXGroup;
-			children = (
-				4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */,
-			);
-			path = iPhone_Resource;
 			sourceTree = "<group>";
 		};
 		4E8A3D8717AD0FC400F49E8D /* iPad_View */ = {
@@ -399,6 +409,78 @@
 			path = CBIntrospect;
 			sourceTree = "<group>";
 		};
+		4EAC4BE617AE82B8004A8E95 /* iPad_Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BE717AE82B8004A8E95 /* iPad_Image */,
+				4EAC4BE917AE82B8004A8E95 /* iPad_Sound */,
+			);
+			path = iPad_Resource;
+			sourceTree = "<group>";
+		};
+		4EAC4BE717AE82B8004A8E95 /* iPad_Image */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BE817AE82B8004A8E95 /* iPad_Resource */,
+			);
+			path = iPad_Image;
+			sourceTree = "<group>";
+		};
+		4EAC4BE917AE82B8004A8E95 /* iPad_Sound */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BEA17AE82B8004A8E95 /* sound1.caf */,
+				4EAC4BEB17AE82B8004A8E95 /* sound2.caf */,
+				4EAC4BEC17AE82B8004A8E95 /* track1.caf */,
+				4EAC4BED17AE82B8004A8E95 /* track2.caf */,
+			);
+			path = iPad_Sound;
+			sourceTree = "<group>";
+		};
+		4EAC4BF317AE82C8004A8E95 /* iPhone_Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BF417AE82C8004A8E95 /* iPhone_Image */,
+				4EAC4BF617AE82C8004A8E95 /* iPhone_Sound */,
+			);
+			path = iPhone_Resource;
+			sourceTree = "<group>";
+		};
+		4EAC4BF417AE82C8004A8E95 /* iPhone_Image */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BF517AE82C8004A8E95 /* iPhone_Resource */,
+			);
+			path = iPhone_Image;
+			sourceTree = "<group>";
+		};
+		4EAC4BF617AE82C8004A8E95 /* iPhone_Sound */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BF717AE82C8004A8E95 /* betting.mp3 */,
+				4EAC4BF817AE82C8004A8E95 /* random.mp3 */,
+				4EAC4BF917AE82C8004A8E95 /* tap.aif */,
+			);
+			path = iPhone_Sound;
+			sourceTree = "<group>";
+		};
+		4EAC4BFE17AE82D7004A8E95 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BFF17AE82D7004A8E95 /* SoundManager */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		4EAC4BFF17AE82D7004A8E95 /* SoundManager */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4C0017AE82D8004A8E95 /* SoundManager.h */,
+				4EAC4C0117AE82D8004A8E95 /* SoundManager.m */,
+			);
+			path = SoundManager;
+			sourceTree = "<group>";
+		};
 		4EBB1AC017ACBB0D0080ED23 = {
 			isa = PBXGroup;
 			children = (
@@ -426,6 +508,7 @@
 		4EBB1ACB17ACBB0D0080ED23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC4BE417AE8070004A8E95 /* AVFoundation.framework */,
 				4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */,
 				4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */,
 				4EAC4B8F17AE6874004A8E95 /* Security.framework */,
@@ -599,8 +682,15 @@
 				4EBB1AEC17ACBB0D0080ED23 /* ViewController_iPad.xib in Resources */,
 				4ECD3F7917AE466A003B9B42 /* iPad_View in Resources */,
 				4ECD3F7B17AE4680003B9B42 /* iPhone_View in Resources */,
-				4ECD3F7D17AE46BF003B9B42 /* iPad_Resource in Resources */,
-				4ECD3F7F17AE46CA003B9B42 /* iPhone_Resource in Resources */,
+				4EAC4BEE17AE82B8004A8E95 /* iPad_Resource in Resources */,
+				4EAC4BEF17AE82B8004A8E95 /* sound1.caf in Resources */,
+				4EAC4BF017AE82B8004A8E95 /* sound2.caf in Resources */,
+				4EAC4BF117AE82B8004A8E95 /* track1.caf in Resources */,
+				4EAC4BF217AE82B8004A8E95 /* track2.caf in Resources */,
+				4EAC4BFA17AE82C8004A8E95 /* iPhone_Resource in Resources */,
+				4EAC4BFB17AE82C8004A8E95 /* betting.mp3 in Resources */,
+				4EAC4BFC17AE82C8004A8E95 /* random.mp3 in Resources */,
+				4EAC4BFD17AE82C8004A8E95 /* tap.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,6 +757,8 @@
 				4EAC4BC917AE7395004A8E95 /* NSObject+JSON.m in Sources */,
 				4EAC4BCA17AE7395004A8E95 /* UIView+Introspector.m in Sources */,
 				4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */,
+				4EAC4BD717AE7D7A004A8E95 /* UIButton+Category.m in Sources */,
+				4EAC4C0217AE82D8004A8E95 /* SoundManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
