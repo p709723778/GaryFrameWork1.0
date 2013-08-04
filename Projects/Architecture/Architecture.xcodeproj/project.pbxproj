@@ -25,6 +25,19 @@
 		4EAC4B9417AE695C004A8E95 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */; };
 		4EAC4BA217AE71BF004A8E95 /* AppDelegateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4B9E17AE71BF004A8E95 /* AppDelegateHelper.m */; };
 		4EAC4BA317AE71BF004A8E95 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BA117AE71BF004A8E95 /* AFAppDotNetAPIClient.m */; };
+		4EAC4BC017AE7395004A8E95 /* CBFileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BA617AE7395004A8E95 /* CBFileWatcher.m */; };
+		4EAC4BC117AE7395004A8E95 /* CBIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BA817AE7395004A8E95 /* CBIntrospect.m */; };
+		4EAC4BC217AE7395004A8E95 /* DCCrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BAC17AE7395004A8E95 /* DCCrossHairView.m */; };
+		4EAC4BC317AE7395004A8E95 /* DCFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BAE17AE7395004A8E95 /* DCFrameView.m */; };
+		4EAC4BC417AE7395004A8E95 /* DCIntrospect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BB017AE7395004A8E95 /* DCIntrospect.m */; };
+		4EAC4BC517AE7395004A8E95 /* DCStatusBarOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BB317AE7395004A8E95 /* DCStatusBarOverlay.m */; };
+		4EAC4BC617AE7395004A8E95 /* DCUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BB517AE7395004A8E95 /* DCUtility.m */; };
+		4EAC4BC717AE7395004A8E95 /* DLInvocationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BB717AE7395004A8E95 /* DLInvocationResult.m */; };
+		4EAC4BC817AE7395004A8E95 /* DLStatementParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BB917AE7395004A8E95 /* DLStatementParser.m */; };
+		4EAC4BC917AE7395004A8E95 /* NSObject+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BBB17AE7395004A8E95 /* NSObject+JSON.m */; };
+		4EAC4BCA17AE7395004A8E95 /* UIView+Introspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BBD17AE7395004A8E95 /* UIView+Introspector.m */; };
+		4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BBF17AE7395004A8E95 /* UIWindow+Introspector.m */; };
+		4EAC4BCD17AE73AD004A8E95 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */; };
 		4EBB1ACD17ACBB0D0080ED23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */; };
 		4EBB1ACF17ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AD117ACBB0D0080ED23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1AD017ACBB0D0080ED23 /* CoreGraphics.framework */; };
@@ -101,6 +114,34 @@
 		4EAC4B9E17AE71BF004A8E95 /* AppDelegateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateHelper.m; sourceTree = "<group>"; };
 		4EAC4BA017AE71BF004A8E95 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
 		4EAC4BA117AE71BF004A8E95 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
+		4EAC4BA517AE7395004A8E95 /* CBFileWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBFileWatcher.h; sourceTree = "<group>"; };
+		4EAC4BA617AE7395004A8E95 /* CBFileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBFileWatcher.m; sourceTree = "<group>"; };
+		4EAC4BA717AE7395004A8E95 /* CBIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBIntrospect.h; sourceTree = "<group>"; };
+		4EAC4BA817AE7395004A8E95 /* CBIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBIntrospect.m; sourceTree = "<group>"; };
+		4EAC4BA917AE7395004A8E95 /* CBIntrospectConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBIntrospectConstants.h; sourceTree = "<group>"; };
+		4EAC4BAA17AE7395004A8E95 /* CBMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMacros.h; sourceTree = "<group>"; };
+		4EAC4BAB17AE7395004A8E95 /* DCCrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCCrossHairView.h; sourceTree = "<group>"; };
+		4EAC4BAC17AE7395004A8E95 /* DCCrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCCrossHairView.m; sourceTree = "<group>"; };
+		4EAC4BAD17AE7395004A8E95 /* DCFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFrameView.h; sourceTree = "<group>"; };
+		4EAC4BAE17AE7395004A8E95 /* DCFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFrameView.m; sourceTree = "<group>"; };
+		4EAC4BAF17AE7395004A8E95 /* DCIntrospect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospect.h; sourceTree = "<group>"; };
+		4EAC4BB017AE7395004A8E95 /* DCIntrospect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCIntrospect.m; sourceTree = "<group>"; };
+		4EAC4BB117AE7395004A8E95 /* DCIntrospectSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCIntrospectSettings.h; sourceTree = "<group>"; };
+		4EAC4BB217AE7395004A8E95 /* DCStatusBarOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCStatusBarOverlay.h; sourceTree = "<group>"; };
+		4EAC4BB317AE7395004A8E95 /* DCStatusBarOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCStatusBarOverlay.m; sourceTree = "<group>"; };
+		4EAC4BB417AE7395004A8E95 /* DCUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCUtility.h; sourceTree = "<group>"; };
+		4EAC4BB517AE7395004A8E95 /* DCUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCUtility.m; sourceTree = "<group>"; };
+		4EAC4BB617AE7395004A8E95 /* DLInvocationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLInvocationResult.h; sourceTree = "<group>"; };
+		4EAC4BB717AE7395004A8E95 /* DLInvocationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLInvocationResult.m; sourceTree = "<group>"; };
+		4EAC4BB817AE7395004A8E95 /* DLStatementParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLStatementParser.h; sourceTree = "<group>"; };
+		4EAC4BB917AE7395004A8E95 /* DLStatementParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLStatementParser.m; sourceTree = "<group>"; };
+		4EAC4BBA17AE7395004A8E95 /* NSObject+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+JSON.h"; sourceTree = "<group>"; };
+		4EAC4BBB17AE7395004A8E95 /* NSObject+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+JSON.m"; sourceTree = "<group>"; };
+		4EAC4BBC17AE7395004A8E95 /* UIView+Introspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Introspector.h"; sourceTree = "<group>"; };
+		4EAC4BBD17AE7395004A8E95 /* UIView+Introspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Introspector.m"; sourceTree = "<group>"; };
+		4EAC4BBE17AE7395004A8E95 /* UIWindow+Introspector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Introspector.h"; sourceTree = "<group>"; };
+		4EAC4BBF17AE7395004A8E95 /* UIWindow+Introspector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Introspector.m"; sourceTree = "<group>"; };
+		4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4EBB1AC917ACBB0D0080ED23 /* Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAC4BCD17AE73AD004A8E95 /* QuartzCore.framework in Frameworks */,
 				4EAC4B9417AE695C004A8E95 /* MobileCoreServices.framework in Frameworks */,
 				4EAC4B9017AE6874004A8E95 /* Security.framework in Frameworks */,
 				4EAC4B8E17AE686A004A8E95 /* SystemConfiguration.framework in Frameworks */,
@@ -323,6 +365,40 @@
 			path = NetWorkHelper;
 			sourceTree = "<group>";
 		};
+		4EAC4BA417AE7395004A8E95 /* CBIntrospect */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BA517AE7395004A8E95 /* CBFileWatcher.h */,
+				4EAC4BA617AE7395004A8E95 /* CBFileWatcher.m */,
+				4EAC4BA717AE7395004A8E95 /* CBIntrospect.h */,
+				4EAC4BA817AE7395004A8E95 /* CBIntrospect.m */,
+				4EAC4BA917AE7395004A8E95 /* CBIntrospectConstants.h */,
+				4EAC4BAA17AE7395004A8E95 /* CBMacros.h */,
+				4EAC4BAB17AE7395004A8E95 /* DCCrossHairView.h */,
+				4EAC4BAC17AE7395004A8E95 /* DCCrossHairView.m */,
+				4EAC4BAD17AE7395004A8E95 /* DCFrameView.h */,
+				4EAC4BAE17AE7395004A8E95 /* DCFrameView.m */,
+				4EAC4BAF17AE7395004A8E95 /* DCIntrospect.h */,
+				4EAC4BB017AE7395004A8E95 /* DCIntrospect.m */,
+				4EAC4BB117AE7395004A8E95 /* DCIntrospectSettings.h */,
+				4EAC4BB217AE7395004A8E95 /* DCStatusBarOverlay.h */,
+				4EAC4BB317AE7395004A8E95 /* DCStatusBarOverlay.m */,
+				4EAC4BB417AE7395004A8E95 /* DCUtility.h */,
+				4EAC4BB517AE7395004A8E95 /* DCUtility.m */,
+				4EAC4BB617AE7395004A8E95 /* DLInvocationResult.h */,
+				4EAC4BB717AE7395004A8E95 /* DLInvocationResult.m */,
+				4EAC4BB817AE7395004A8E95 /* DLStatementParser.h */,
+				4EAC4BB917AE7395004A8E95 /* DLStatementParser.m */,
+				4EAC4BBA17AE7395004A8E95 /* NSObject+JSON.h */,
+				4EAC4BBB17AE7395004A8E95 /* NSObject+JSON.m */,
+				4EAC4BBC17AE7395004A8E95 /* UIView+Introspector.h */,
+				4EAC4BBD17AE7395004A8E95 /* UIView+Introspector.m */,
+				4EAC4BBE17AE7395004A8E95 /* UIWindow+Introspector.h */,
+				4EAC4BBF17AE7395004A8E95 /* UIWindow+Introspector.m */,
+			);
+			path = CBIntrospect;
+			sourceTree = "<group>";
+		};
 		4EBB1AC017ACBB0D0080ED23 = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +426,7 @@
 		4EBB1ACB17ACBB0D0080ED23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */,
 				4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */,
 				4EAC4B8F17AE6874004A8E95 /* Security.framework */,
 				4EAC4B8D17AE6869004A8E95 /* SystemConfiguration.framework */,
@@ -436,6 +513,7 @@
 		4ECD3F6B17AE34ED003B9B42 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				4EAC4BA417AE7395004A8E95 /* CBIntrospect */,
 				4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */,
 				4ECD3F7017AE366F003B9B42 /* RegularVerification.m */,
 			);
@@ -577,6 +655,18 @@
 				4EAC4B8C17AE6715004A8E95 /* UIImageView+AFNetworking.m in Sources */,
 				4EAC4BA217AE71BF004A8E95 /* AppDelegateHelper.m in Sources */,
 				4EAC4BA317AE71BF004A8E95 /* AFAppDotNetAPIClient.m in Sources */,
+				4EAC4BC017AE7395004A8E95 /* CBFileWatcher.m in Sources */,
+				4EAC4BC117AE7395004A8E95 /* CBIntrospect.m in Sources */,
+				4EAC4BC217AE7395004A8E95 /* DCCrossHairView.m in Sources */,
+				4EAC4BC317AE7395004A8E95 /* DCFrameView.m in Sources */,
+				4EAC4BC417AE7395004A8E95 /* DCIntrospect.m in Sources */,
+				4EAC4BC517AE7395004A8E95 /* DCStatusBarOverlay.m in Sources */,
+				4EAC4BC617AE7395004A8E95 /* DCUtility.m in Sources */,
+				4EAC4BC717AE7395004A8E95 /* DLInvocationResult.m in Sources */,
+				4EAC4BC817AE7395004A8E95 /* DLStatementParser.m in Sources */,
+				4EAC4BC917AE7395004A8E95 /* NSObject+JSON.m in Sources */,
+				4EAC4BCA17AE7395004A8E95 /* UIView+Introspector.m in Sources */,
+				4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

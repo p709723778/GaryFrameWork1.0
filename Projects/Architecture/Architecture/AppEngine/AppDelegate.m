@@ -11,6 +11,7 @@
 #import "ViewController.h"
 #import "GaryPersonalLog.h"
 #import "AppDelegateHelper.h"
+#import "CBIntrospect.h"
 
 @implementation AppDelegate
 
@@ -28,6 +29,8 @@ AS_SINGLETON(AppDelegate)
 {
     //本人版权日志输出
     [GaryPersonalLog outPutPersonalLog];
+    // must be set before any nib is called
+    [CBIntrospect setIntrospectorKeyName:@"introspectorName"];
     
     if ([AppDelegateHelper isFirstLaunch]) {
         
@@ -43,6 +46,17 @@ AS_SINGLETON(AppDelegate)
     self.viewController.view.backgroundColor = [UIColor mudColor];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
+    //UI调试工具加载
+    [[CBIntrospect sharedIntrospector] start];
+    
+    /**
+     Listen for remote notification messages.
+     Notifications can be sent from View Introspector, using the Messenger window.
+     */
+    [[CBIntrospect sharedIntrospector] listenForRemoteNotifications];
+    
     return YES;
 }
 
