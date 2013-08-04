@@ -23,7 +23,8 @@
 		4EAC4B8E17AE686A004A8E95 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4B8D17AE6869004A8E95 /* SystemConfiguration.framework */; };
 		4EAC4B9017AE6874004A8E95 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4B8F17AE6874004A8E95 /* Security.framework */; };
 		4EAC4B9417AE695C004A8E95 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */; };
-		4EAC4B9A17AE7068004A8E95 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4B9917AE7068004A8E95 /* AppHelper.m */; };
+		4EAC4BA217AE71BF004A8E95 /* AppDelegateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4B9E17AE71BF004A8E95 /* AppDelegateHelper.m */; };
+		4EAC4BA317AE71BF004A8E95 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAC4BA117AE71BF004A8E95 /* AFAppDotNetAPIClient.m */; };
 		4EBB1ACD17ACBB0D0080ED23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */; };
 		4EBB1ACF17ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AD117ACBB0D0080ED23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1AD017ACBB0D0080ED23 /* CoreGraphics.framework */; };
@@ -96,8 +97,10 @@
 		4EAC4B8D17AE6869004A8E95 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4EAC4B8F17AE6874004A8E95 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		4EAC4B9817AE7068004A8E95 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
-		4EAC4B9917AE7068004A8E95 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		4EAC4B9D17AE71BF004A8E95 /* AppDelegateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateHelper.h; sourceTree = "<group>"; };
+		4EAC4B9E17AE71BF004A8E95 /* AppDelegateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateHelper.m; sourceTree = "<group>"; };
+		4EAC4BA017AE71BF004A8E95 /* AFAppDotNetAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFAppDotNetAPIClient.h; sourceTree = "<group>"; };
+		4EAC4BA117AE71BF004A8E95 /* AFAppDotNetAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFAppDotNetAPIClient.m; sourceTree = "<group>"; };
 		4EBB1AC917ACBB0D0080ED23 /* Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -293,13 +296,31 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		4EAC4B9717AE7067004A8E95 /* Helper */ = {
+		4EAC4B9B17AE71BF004A8E95 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				4EAC4B9817AE7068004A8E95 /* AppHelper.h */,
-				4EAC4B9917AE7068004A8E95 /* AppHelper.m */,
+				4EAC4B9C17AE71BF004A8E95 /* AppHelper */,
+				4EAC4B9F17AE71BF004A8E95 /* NetWorkHelper */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		4EAC4B9C17AE71BF004A8E95 /* AppHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4B9D17AE71BF004A8E95 /* AppDelegateHelper.h */,
+				4EAC4B9E17AE71BF004A8E95 /* AppDelegateHelper.m */,
+			);
+			path = AppHelper;
+			sourceTree = "<group>";
+		};
+		4EAC4B9F17AE71BF004A8E95 /* NetWorkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				4EAC4BA017AE71BF004A8E95 /* AFAppDotNetAPIClient.h */,
+				4EAC4BA117AE71BF004A8E95 /* AFAppDotNetAPIClient.m */,
+			);
+			path = NetWorkHelper;
 			sourceTree = "<group>";
 		};
 		4EBB1AC017ACBB0D0080ED23 = {
@@ -308,7 +329,7 @@
 				4E8A3D6D17ACF33100F49E8D /* Library */,
 				4E8A3D7717AD07A800F49E8D /* Category */,
 				4EBB1AD217ACBB0D0080ED23 /* Architecture */,
-				4EAC4B9717AE7067004A8E95 /* Helper */,
+				4EAC4B9B17AE71BF004A8E95 /* Helper */,
 				4ECD3F6B17AE34ED003B9B42 /* Tool */,
 				4E8A3D7F17AD097000F49E8D /* GaryPersonaManage */,
 				4EBB1AF917ACBB0D0080ED23 /* ArchitectureTests */,
@@ -554,7 +575,8 @@
 				4EAC4B8A17AE6715004A8E95 /* AFURLConnectionOperation.m in Sources */,
 				4EAC4B8B17AE6715004A8E95 /* AFXMLRequestOperation.m in Sources */,
 				4EAC4B8C17AE6715004A8E95 /* UIImageView+AFNetworking.m in Sources */,
-				4EAC4B9A17AE7068004A8E95 /* AppHelper.m in Sources */,
+				4EAC4BA217AE71BF004A8E95 /* AppDelegateHelper.m in Sources */,
+				4EAC4BA317AE71BF004A8E95 /* AFAppDotNetAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

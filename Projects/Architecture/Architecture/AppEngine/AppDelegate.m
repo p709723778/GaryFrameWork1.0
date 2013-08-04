@@ -10,7 +10,7 @@
 
 #import "ViewController.h"
 #import "GaryPersonalLog.h"
-#import "AppHelper.h"
+#import "AppDelegateHelper.h"
 
 @implementation AppDelegate
 
@@ -29,7 +29,7 @@ AS_SINGLETON(AppDelegate)
     //本人版权日志输出
     [GaryPersonalLog outPutPersonalLog];
     
-    if ([AppHelper isFirstLaunch]) {
+    if ([AppDelegateHelper isFirstLaunch]) {
         
     }
     

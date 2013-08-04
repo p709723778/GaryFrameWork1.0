@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Gary. All rights reserved.
 //
 
-#import "AppHelper.h"
+#import "AppDelegateHelper.h"
 
-@implementation AppHelper
+@implementation AppDelegateHelper
 
 
 /**

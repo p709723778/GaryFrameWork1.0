@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AppHelper : NSObject
+@interface AppDelegateHelper : NSObject
 
 + (BOOL)isFirstLaunch;
 
