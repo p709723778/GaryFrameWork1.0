@@ -32,6 +32,43 @@
     button.frame = CGRectMake(20, 60, 100, 30);
     [bgview addSubview:lb1];
     [bgview addSubview:button];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityChanged:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    Reachability * reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    reach.reachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Block Says Reachable");
+        });
+    };
+    
+    reach.unreachableBlock = ^(Reachability * reachability)
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"Block Says Unreachable");
+        });
+    };
+    
+    [reach startNotifier];
+}
+
+-(void)reachabilityChanged:(NSNotification*)note
+{
+    Reachability * reach = [note object];
+    
+    if([reach isReachable])
+    {
+        NSLog(@"Notification Says Unreachable");
+    }
+    else
+    {
+        NSLog(@"Notification Says Unreachable");
+    }
 }
 
 - (void)didReceiveMemoryWarning
