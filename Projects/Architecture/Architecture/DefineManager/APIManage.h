@@ -38,6 +38,10 @@
  *	@param 	Action_API 	操作API地址
  *
  *	@return	整个服务器请求地址
+ *
+ *  特此声明   这是是给之前的ASI网络请求做的一个 API组合
+ *            当AFNetworking这个框架出来以后,它有自己的一个api组合管理
+ *            如果项目用的是这个框架,就没有必要用该组合了
  */
 
 #define SERVER_API(Action_API) [NSString stringWithFormat:@"%@%@",ServerAddress,Action_API]
