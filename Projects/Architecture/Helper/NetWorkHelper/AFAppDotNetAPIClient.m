@@ -24,7 +24,10 @@
 
 #import "AFJSONRequestOperation.h"
 
-static NSString * const kAFAppDotNetAPIBaseURLString = @"https://alpha-api.app.net/";
+//static NSString * const kAFAppDotNetAPIBaseURLString = @"https://alpha-api.app.net/";
+
+//原本该类是用kAFAppDotNetAPIBaseURLString定义服务器地址的,
+//在这里我使用自己定义的ServerAddress服务器地址代替,方便切换调试
 
 @implementation AFAppDotNetAPIClient
 
@@ -32,7 +35,7 @@ static NSString * const kAFAppDotNetAPIBaseURLString = @"https://alpha-api.app.n
     static AFAppDotNetAPIClient *_sharedClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:kAFAppDotNetAPIBaseURLString]];
+        _sharedClient = [[AFAppDotNetAPIClient alloc] initWithBaseURL:[NSURL URLWithString:ServerAddress]];
     });
     
     return _sharedClient;

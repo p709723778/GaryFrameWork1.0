@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 Gary. All rights reserved.
 //
 
-#import "DefineImport.h"
-
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

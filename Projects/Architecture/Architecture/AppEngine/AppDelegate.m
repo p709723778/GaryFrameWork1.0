@@ -47,8 +47,8 @@ AS_SINGLETON(AppDelegate)
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
-    
-    //UI调试工具加载
+//UI调试工具加载  在模拟器模式下使用
+#ifdef TARGET_IPHONE_SIMULATOR
     [[CBIntrospect sharedIntrospector] start];
     
     /**
@@ -56,6 +56,7 @@ AS_SINGLETON(AppDelegate)
      Notifications can be sent from View Introspector, using the Messenger window.
      */
     [[CBIntrospect sharedIntrospector] listenForRemoteNotifications];
+#endif
     
     return YES;
 }
