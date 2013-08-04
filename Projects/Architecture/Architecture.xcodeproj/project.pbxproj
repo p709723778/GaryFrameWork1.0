@@ -31,6 +31,10 @@
 		4ECD3F6817AE2F9C003B9B42 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */; };
 		4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7017AE366F003B9B42 /* RegularVerification.m */; };
 		4ECD3F7717AE4411003B9B42 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7617AE4411003B9B42 /* AppHelper.m */; };
+		4ECD3F7917AE466A003B9B42 /* iPad_View in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7817AE466A003B9B42 /* iPad_View */; };
+		4ECD3F7B17AE4680003B9B42 /* iPhone_View in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7A17AE4680003B9B42 /* iPhone_View */; };
+		4ECD3F7D17AE46BF003B9B42 /* iPad_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */; };
+		4ECD3F7F17AE46CA003B9B42 /* iPhone_Resource in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		4ECD3F7017AE366F003B9B42 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
 		4ECD3F7517AE4411003B9B42 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
 		4ECD3F7617AE4411003B9B42 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
+		4ECD3F7817AE466A003B9B42 /* iPad_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_View; sourceTree = "<group>"; };
+		4ECD3F7A17AE4680003B9B42 /* iPhone_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPhone_View; sourceTree = "<group>"; };
+		4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_Resource; sourceTree = "<group>"; };
+		4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPhone_Resource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +192,7 @@
 		4E8A3D8517AD0F8E00F49E8D /* iPad_Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD3F7C17AE46BF003B9B42 /* iPad_Resource */,
 			);
 			path = iPad_Resource;
 			sourceTree = "<group>";
@@ -191,6 +200,7 @@
 		4E8A3D8617AD0F8E00F49E8D /* iPhone_Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD3F7E17AE46CA003B9B42 /* iPhone_Resource */,
 			);
 			path = iPhone_Resource;
 			sourceTree = "<group>";
@@ -198,6 +208,7 @@
 		4E8A3D8717AD0FC400F49E8D /* iPad_View */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD3F7817AE466A003B9B42 /* iPad_View */,
 			);
 			path = iPad_View;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 		4E8A3D8817AD0FC400F49E8D /* iPhone_View */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD3F7A17AE4680003B9B42 /* iPhone_View */,
 			);
 			path = iPhone_View;
 			sourceTree = "<group>";
@@ -411,6 +423,10 @@
 				4EBB1AE317ACBB0D0080ED23 /* Default-568h@2x.png in Resources */,
 				4EBB1AE917ACBB0D0080ED23 /* ViewController_iPhone.xib in Resources */,
 				4EBB1AEC17ACBB0D0080ED23 /* ViewController_iPad.xib in Resources */,
+				4ECD3F7917AE466A003B9B42 /* iPad_View in Resources */,
+				4ECD3F7B17AE4680003B9B42 /* iPhone_View in Resources */,
+				4ECD3F7D17AE46BF003B9B42 /* iPad_Resource in Resources */,
+				4ECD3F7F17AE46CA003B9B42 /* iPhone_Resource in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
