@@ -6,7 +6,13 @@
 //  Copyright (c) 2013 Gary. All rights reserved.
 //
 
+
+/**
+ *	@brief	该头文件是定义单例模式 
+ *  在需要声明单例模式的类中使用  AS_SINGLETON(类名)
+ */
 #ifndef Architecture_Singleton_h
+
 #define Architecture_Singleton_h
 
 #define AS_SINGLETON( __class ) \

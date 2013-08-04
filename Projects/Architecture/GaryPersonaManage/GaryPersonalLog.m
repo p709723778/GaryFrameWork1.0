@@ -46,16 +46,13 @@
     fprintf( stderr, "    	http://blog.sina.com.cn/p709723778		\n" );
     fprintf( stderr, "    												\n" );
     fprintf( stderr, "    												\n" );
-    fprintf( stderr, "    	Home: %s	\n", [NSBundle mainBundle].bundlePath.UTF8String );
     fprintf( stderr, "    												\n" );
     fprintf( stderr, "    												\n" );
     fprintf( stderr, "    	version %s									\n", [GARY_VERSION UTF8String] );
-    fprintf( stderr, "    												\n" );
-    fprintf( stderr, "    	copyright (c) 2013-2014, {Bee} community	\n" );
-    fprintf( stderr, "    	http://www.bee-framework.com				\n" );
+    fprintf( stderr, "    	当前系统语言%s	\n", [UIDevice OSLanguage].UTF8String );
     fprintf( stderr, "    												\n" );
     fprintf( stderr, "    												\n" );
-    fprintf( stderr, "   isPhone 	%s	\n", [UIDevice jailBreaker].UTF8String );
+    fprintf( stderr, "      越狱信息 	%s	\n", [UIDevice jailBreaker].UTF8String );
     fprintf( stderr, "    	%s	\n", [UIDevice OSVersion].UTF8String );
     fprintf( stderr, "    	%s	\n", [UIDevice deviceModel].UTF8String );
     fprintf( stderr, "    	UUID: %s  \n", [UIDevice deviceUUID].UTF8String );

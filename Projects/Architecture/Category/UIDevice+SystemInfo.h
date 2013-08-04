@@ -39,6 +39,12 @@
 //获取操作系统版本
 + (NSString *)OSVersion;
 
+/**
+ *获取当前系统语言
+ * en:英文  zh-Hans:简体中文   zh-Hant:繁体中文    ja:日本
+ */
++ (NSString*)OSLanguage;
+
 //获取App版本
 + (NSString *)appVersion;
 
@@ -54,7 +60,7 @@
 //是否越狱
 + (BOOL)isJailBroken		NS_AVAILABLE_IOS(4_0);
 
-
+//此方法只针对实现越狱的真机iPhone
 + (NSString *)jailBreaker	NS_AVAILABLE_IOS(4_0);
 
 + (BOOL)isDevicePhone;

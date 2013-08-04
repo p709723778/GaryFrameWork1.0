@@ -10,6 +10,7 @@
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
 		4E8A3D7A17AD07C400F49E8D /* UIDevice+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */; };
 		4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */; };
+		4E8A3D8D17AE1A9500F49E8D /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */; };
 		4EBB1ACD17ACBB0D0080ED23 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */; };
 		4EBB1ACF17ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AD117ACBB0D0080ED23 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1AD017ACBB0D0080ED23 /* CoreGraphics.framework */; };
@@ -27,6 +28,9 @@
 		4EBB1AF617ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AFE17ACBB0D0080ED23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBB1AFC17ACBB0D0080ED23 /* InfoPlist.strings */; };
 		4EBB1B0117ACBB0D0080ED23 /* ArchitectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB1B0017ACBB0D0080ED23 /* ArchitectureTests.m */; };
+		4ECD3F6817AE2F9C003B9B42 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */; };
+		4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7017AE366F003B9B42 /* RegularVerification.m */; };
+		4ECD3F7717AE4411003B9B42 /* AppHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7617AE4411003B9B42 /* AppHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,8 @@
 		4E8A3D8017AD097100F49E8D /* GaryPersonalLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaryPersonalLog.h; sourceTree = "<group>"; };
 		4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaryPersonalLog.m; sourceTree = "<group>"; };
 		4E8A3D8317AD0A7800F49E8D /* CategoryManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryManage.h; sourceTree = "<group>"; };
+		4E8A3D8B17AE1A9500F49E8D /* UIColor+Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colours.h"; sourceTree = "<group>"; };
+		4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
 		4EBB1AC917ACBB0D0080ED23 /* Architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architecture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBB1ACC17ACBB0D0080ED23 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -76,6 +82,13 @@
 		4EBB1AFF17ACBB0D0080ED23 /* ArchitectureTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchitectureTests.h; sourceTree = "<group>"; };
 		4EBB1B0017ACBB0D0080ED23 /* ArchitectureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchitectureTests.m; sourceTree = "<group>"; };
 		4EBB1B0C17ACBC2E0080ED23 /* APIManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManage.h; sourceTree = "<group>"; };
+		4ECD3F6617AE2F9C003B9B42 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		4ECD3F6917AE3269003B9B42 /* ShorthandMethodManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShorthandMethodManage.h; sourceTree = "<group>"; };
+		4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularVerification.h; sourceTree = "<group>"; };
+		4ECD3F7017AE366F003B9B42 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
+		4ECD3F7517AE4411003B9B42 /* AppHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppHelper.h; sourceTree = "<group>"; };
+		4ECD3F7617AE4411003B9B42 /* AppHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +155,10 @@
 				4E8A3D8317AD0A7800F49E8D /* CategoryManage.h */,
 				4E8A3D7817AD07C400F49E8D /* UIDevice+SystemInfo.h */,
 				4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */,
+				4E8A3D8B17AE1A9500F49E8D /* UIColor+Colours.h */,
+				4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */,
+				4ECD3F6617AE2F9C003B9B42 /* NSString+Category.h */,
+				4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -155,14 +172,52 @@
 			path = GaryPersonaManage;
 			sourceTree = "<group>";
 		};
+		4E8A3D8417AD0F8E00F49E8D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4E8A3D8517AD0F8E00F49E8D /* iPad_Resource */,
+				4E8A3D8617AD0F8E00F49E8D /* iPhone_Resource */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4E8A3D8517AD0F8E00F49E8D /* iPad_Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPad_Resource;
+			sourceTree = "<group>";
+		};
+		4E8A3D8617AD0F8E00F49E8D /* iPhone_Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPhone_Resource;
+			sourceTree = "<group>";
+		};
+		4E8A3D8717AD0FC400F49E8D /* iPad_View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPad_View;
+			sourceTree = "<group>";
+		};
+		4E8A3D8817AD0FC400F49E8D /* iPhone_View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPhone_View;
+			sourceTree = "<group>";
+		};
 		4EBB1AC017ACBB0D0080ED23 = {
 			isa = PBXGroup;
 			children = (
 				4E8A3D6D17ACF33100F49E8D /* Library */,
 				4E8A3D7717AD07A800F49E8D /* Category */,
 				4EBB1AD217ACBB0D0080ED23 /* Architecture */,
-				4EBB1AF917ACBB0D0080ED23 /* ArchitectureTests */,
+				4ECD3F6B17AE34ED003B9B42 /* Tool */,
 				4E8A3D7F17AD097000F49E8D /* GaryPersonaManage */,
+				4EBB1AF917ACBB0D0080ED23 /* ArchitectureTests */,
 				4EBB1ACB17ACBB0D0080ED23 /* Frameworks */,
 				4EBB1ACA17ACBB0D0080ED23 /* Products */,
 			);
@@ -197,6 +252,7 @@
 				4EBB1AE517ACBB0D0080ED23 /* ViewController.m */,
 				4EBB1AE717ACBB0D0080ED23 /* ViewController_iPhone.xib */,
 				4EBB1AEA17ACBB0D0080ED23 /* ViewController_iPad.xib */,
+				4E8A3D8417AD0F8E00F49E8D /* Resource */,
 				4EBB1AD317ACBB0D0080ED23 /* Supporting Files */,
 			);
 			path = Architecture;
@@ -238,6 +294,9 @@
 		4EBB1B0A17ACBBAD0080ED23 /* AppEngine */ = {
 			isa = PBXGroup;
 			children = (
+				4ECD3F7417AE43FC003B9B42 /* Helper */,
+				4E8A3D8717AD0FC400F49E8D /* iPad_View */,
+				4E8A3D8817AD0FC400F49E8D /* iPhone_View */,
 				4EBB1ADB17ACBB0D0080ED23 /* AppDelegate.h */,
 				4EBB1ADC17ACBB0D0080ED23 /* AppDelegate.m */,
 			);
@@ -252,8 +311,27 @@
 				4E8A3D6317ACDC9100F49E8D /* RequestAddressManage.h */,
 				4E8A3D6217ACCD6200F49E8D /* AppConfigManage.h */,
 				4E8A3D6417ACE36B00F49E8D /* Singleton.h */,
+				4ECD3F6917AE3269003B9B42 /* ShorthandMethodManage.h */,
 			);
 			path = DefineManager;
+			sourceTree = "<group>";
+		};
+		4ECD3F6B17AE34ED003B9B42 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */,
+				4ECD3F7017AE366F003B9B42 /* RegularVerification.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4ECD3F7417AE43FC003B9B42 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4ECD3F7517AE4411003B9B42 /* AppHelper.h */,
+				4ECD3F7617AE4411003B9B42 /* AppHelper.m */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +451,10 @@
 				4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */,
 				4E8A3D7A17AD07C400F49E8D /* UIDevice+SystemInfo.m in Sources */,
 				4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */,
+				4E8A3D8D17AE1A9500F49E8D /* UIColor+Colours.m in Sources */,
+				4ECD3F6817AE2F9C003B9B42 /* NSString+Category.m in Sources */,
+				4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */,
+				4ECD3F7717AE4411003B9B42 /* AppHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

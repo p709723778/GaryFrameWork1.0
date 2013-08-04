@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "GaryPersonalLog.h"
+#import "AppHelper.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,7 @@ AS_SINGLETON(AppDelegate)
 {
     [_window release];
     [_viewController release];
+    
     [super dealloc];
 }
 
@@ -27,6 +29,10 @@ AS_SINGLETON(AppDelegate)
     //本人版权日志输出
     [GaryPersonalLog outPutPersonalLog];
     
+    if ([AppHelper isFirstLaunch]) {
+        
+    }
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -34,6 +40,7 @@ AS_SINGLETON(AppDelegate)
     } else {
         self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil] autorelease];
     }
+    self.viewController.view.backgroundColor = [UIColor mudColor];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

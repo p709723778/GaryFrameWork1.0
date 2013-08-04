@@ -18,6 +18,7 @@
 #import "APIManage.h"
 #import "AppConfigManage.h"
 #import "CategoryManage.h"
+#import "ShorthandMethodManage.h"
 
 
 #import "Singleton.h"

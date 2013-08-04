@@ -10,5 +10,7 @@
 #define Architecture_CategoryService_h
 
 #import "UIDevice+SystemInfo.h"
+#import "UIColor+Colours.h"
+#import "NSString+Category.h"
 
 #endif
