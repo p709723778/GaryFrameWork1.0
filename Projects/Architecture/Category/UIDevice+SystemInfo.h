@@ -66,6 +66,8 @@
 + (BOOL)isDevicePhone;
 + (BOOL)isDevicePad;
 
++ (BOOL)isRetina;
+
 + (BOOL)isPhone35;            //iPhone4
 + (BOOL)isPhoneRetina35;      //iPhone4S
 + (BOOL)isPhoneRetina4;       //iPhone5

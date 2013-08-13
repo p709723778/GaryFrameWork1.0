@@ -49,7 +49,7 @@
 #if __has_feature(objc_arc)
 //compiling with ARC
 #else
-#define mSafeRelease(object)    [object release];  object=nil
+#define kSafeRelease(object)    [object release];  object=nil
 #endif
 
 

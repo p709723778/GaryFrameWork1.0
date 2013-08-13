@@ -168,6 +168,21 @@ static const char * __jb_app = NULL;
 	return NO;
 }
 
++ (BOOL)isRetina
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+    if([[UIScreen mainScreen] scale]==2)
+    {
+        return YES;
+    }else{
+        return NO;
+    }
+#else	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+	return NO;
+#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+
+}
+
 + (BOOL)isPhone35
 {
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
