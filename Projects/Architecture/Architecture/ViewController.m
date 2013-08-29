@@ -17,6 +17,17 @@
 
 @implementation ViewController
 
+- (NSString *)tabImageName
+{
+	return @"image-1";
+}
+
+- (NSString *)tabTitle
+{
+    self.title = @"Profile";
+	return self.title;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

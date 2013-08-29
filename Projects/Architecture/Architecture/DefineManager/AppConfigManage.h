@@ -52,6 +52,21 @@
 #define kSafeRelease(object)    [object release];  object=nil
 #endif
 
+#pragma mark -该宏定义是让 AFNetworking支持4.3所定义
+
+/*因为我们工程支持 4.3，所以 weak, __weak 关键字不能用， 可以通过宏定义将 5.0 以下时 weak 关键字定义为 unsafe_unretained:*/
+
+#if (!__has_feature(objc_arc)) || \
+(defined __IPHONE_OS_VERSION_MIN_REQUIRED && \
+__IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_5_0) || \
+(defined __MAC_OS_X_VERSION_MIN_REQUIRED && \
+__MAC_OS_X_VERSION_MIN_REQUIRED < __MAC_10_7)
+#undef weak
+#define weak unsafe_unretained
+#undef __weak
+#define __weak __unsafe_unretained
+#endif
+
 
 #pragma mark - App Id , 下载地址 , 评价地址
 

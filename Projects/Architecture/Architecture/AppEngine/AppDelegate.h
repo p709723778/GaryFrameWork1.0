@@ -7,11 +7,14 @@
 //
 
 @class ViewController;
+@class AKTabBarController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (retain, nonatomic) ViewController *viewController;
+
+@property (retain, nonatomic) AKTabBarController *tabBarController;
 
 @end
