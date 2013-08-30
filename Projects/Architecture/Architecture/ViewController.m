@@ -77,6 +77,7 @@
         [self.navigationController.navigationBar insertSubview:[[[UIImageView alloc] initWithImage:backgroundImage] autorelease] atIndex:1];
     }
     
+    //navLogo 定义
     UIImageView *imageView = [[UIImageView alloc] initWithImage:LoadImage(@"NavLogo@2x.png")];
     imageView.frame = CGRectMake(5, 0, 18, 44);
     [self.navigationController.view addSubview:imageView];
