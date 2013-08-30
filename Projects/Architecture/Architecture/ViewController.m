@@ -96,6 +96,14 @@
     [bgview addSubview:lb1];
     [bgview addSubview:button];
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(30, 130, 200, 60)];
+    label.font = Digital_7(30.0f);
+    label.backgroundColor = [UIColor clearColor];
+    label.text = @"123:786";
+    [self.view addSubview:label];
+    [label release];
+    
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(reachabilityChanged:)
                                                  name:kReachabilityChangedNotification

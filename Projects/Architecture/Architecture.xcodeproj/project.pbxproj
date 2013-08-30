@@ -11,6 +11,7 @@
 		4E0FD24317D08C3F0039780A /* zixunBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24117D08C3F0039780A /* zixunBar.png */; };
 		4E0FD24617D09FFF0039780A /* NavButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24417D09FFF0039780A /* NavButton@2x.png */; };
 		4E0FD24717D09FFF0039780A /* NavButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24517D09FFF0039780A /* NavButtonPressed@2x.png */; };
+		4E0FD24E17D0BDDB0039780A /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24D17D0BDDB0039780A /* digital-7.ttf */; };
 		4E758E0217AE91B00000916E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E758E0417AE91B00000916E /* Localizable.strings */; };
 		4E758E1117AEA3100000916E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E758E1017AEA3100000916E /* Reachability.m */; };
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
@@ -133,6 +134,7 @@
 		4E0FD24117D08C3F0039780A /* zixunBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zixunBar.png; sourceTree = "<group>"; };
 		4E0FD24417D09FFF0039780A /* NavButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavButton@2x.png"; sourceTree = "<group>"; };
 		4E0FD24517D09FFF0039780A /* NavButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavButtonPressed@2x.png"; sourceTree = "<group>"; };
+		4E0FD24D17D0BDDB0039780A /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		4E758DF817AE8DAE0000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4E758E0317AE91B00000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -331,6 +333,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E0FD24C17D0BDDB0039780A /* FontTTF */ = {
+			isa = PBXGroup;
+			children = (
+				4E0FD24D17D0BDDB0039780A /* digital-7.ttf */,
+			);
+			path = FontTTF;
+			sourceTree = "<group>";
+		};
 		4E758E0E17AEA3100000916E /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,6 +415,7 @@
 		4E8A3D8417AD0F8E00F49E8D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				4E0FD24C17D0BDDB0039780A /* FontTTF */,
 				4EAC4BF317AE82C8004A8E95 /* iPhone_Resource */,
 				4EAC4BE617AE82B8004A8E95 /* iPad_Resource */,
 			);
@@ -941,6 +952,7 @@
 				4E0FD24317D08C3F0039780A /* zixunBar.png in Resources */,
 				4E0FD24617D09FFF0039780A /* NavButton@2x.png in Resources */,
 				4E0FD24717D09FFF0039780A /* NavButtonPressed@2x.png in Resources */,
+				4E0FD24E17D0BDDB0039780A /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

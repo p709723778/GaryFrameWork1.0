@@ -78,6 +78,9 @@
 //方正黑体简体字体定义
 #define FONT(F) [UIFont fontWithName:@"FZHTJW--GB1-0" size:F]
 
+//针对数字和字符显示电子样式
+#define Digital_7(s)          [UIFont fontWithName:@"Digital-7 Mono" size:s]
+
 
 #pragma mark -设置View的tag属性
 //设置View的tag属性
