@@ -17,15 +17,19 @@
 
 @implementation ViewController
 
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.title = @"Profile";
+    }
+    return self;
+}
+
 - (NSString *)tabImageName
 {
 	return @"image-1";
-}
-
-- (NSString *)tabTitle
-{
-    self.title = @"Profile";
-	return self.title;
 }
 
 - (void)viewDidLoad
