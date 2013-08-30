@@ -10,6 +10,16 @@
 
 @implementation AppDelegateHelper
 
+DEF_SINGLETON(AppDelegateHelper);
+
+-(id)init
+{
+    if (self = [super init]) {
+        _isFirst = [AppDelegateHelper isFirstLaunch];
+    }
+    return self;
+}
+
 
 /**
  *	@brief	判断App是否第一次启动

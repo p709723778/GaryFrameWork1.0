@@ -21,15 +21,11 @@
 
 @implementation AppDelegate
 
-AS_SINGLETON(AppDelegate)
-
 - (void)dealloc
 {
     kSafeRelease(_window);
     kSafeRelease(_viewController);
     kSafeRelease(_tabBarController);
-    
-    
     [super dealloc];
 }
 
@@ -40,7 +36,9 @@ AS_SINGLETON(AppDelegate)
     // must be set before any nib is called
     [CBIntrospect setIntrospectorKeyName:@"introspectorName"];
     
-    if ([AppDelegateHelper isFirstLaunch]) {
+    AppDelegateHelper *ppDelegateHelper =[AppDelegateHelper sharedInstance];
+    NSLog(@"%@",(ppDelegateHelper.isFirst)?@"是":@"否");
+    if (ppDelegateHelper.isFirst) {
         
     }
     
@@ -172,7 +170,7 @@ AS_SINGLETON(AppDelegate)
     return YES;
 }
 
-//启动液加载动画
+#pragma mark -启动液加载动画
 - (void)appLaunchingWithAnimation
 {
     

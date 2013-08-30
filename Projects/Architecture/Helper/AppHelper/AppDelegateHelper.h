@@ -10,6 +10,8 @@
 
 @interface AppDelegateHelper : NSObject
 
-+ (BOOL)isFirstLaunch;
+AS_SINGLETON(AppDelegateHelper);
+
+@property(assign, nonatomic)BOOL isFirst;
 
 @end

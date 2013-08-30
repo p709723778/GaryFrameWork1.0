@@ -15,44 +15,44 @@
 
 #define Architecture_Singleton_h
 
-#define AS_SINGLETON( __class ) \
-
+//在h文件调用
 #undef	AS_SINGLETON
-#define AS_SINGLETON(__class) \
-\
-static __class *shared##classname = nil; \
-\
-+ (__class *)shared##Instance \
+#define AS_SINGLETON( __class ) \
+- (__class *)sharedInstance; \
++ (__class *)sharedInstance;
+
+
+//在m文件调用
+#undef	DEF_SINGLETON
+#define DEF_SINGLETON( __class ) \
+- (__class *)sharedInstance \
 { \
-@synchronized(self) \
+return [__class sharedInstance]; \
+} \
++ (__class *)sharedInstance \
 { \
-if (shared##classname == nil) \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
+return __singleton__; \
+}
+
+#undef	DEF_SINGLETON_AUTOLOAD
+#define DEF_SINGLETON_AUTOLOAD( __class ) \
+- (__class *)sharedInstance \
 { \
-shared##classname = [[self alloc] init]; \
+return [__class sharedInstance]; \
 } \
-} \
-\
-return shared##classname; \
-} \
-\
-+ (id)allocWithZone:(NSZone *)zone \
++ (__class *)sharedInstance \
 { \
-@synchronized(self) \
+static dispatch_once_t once; \
+static __class * __singleton__; \
+dispatch_once( &once, ^{ __singleton__ = [[[self class] alloc] init]; } ); \
+return __singleton__; \
+} \
++ (void)load \
 { \
-if (shared##classname == nil) \
-{ \
-shared##classname = [super allocWithZone:zone]; \
-return shared##classname; \
-} \
-} \
-\
-return nil; \
-} \
-\
-- (id)copyWithZone:(NSZone *)zone \
-{ \
-return self; \
-} \
-\
+[self sharedInstance]; \
+}
 
 #endif
