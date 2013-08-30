@@ -20,18 +20,44 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "AKTabBarController.h"
+
 #import "UINavigationController+AKTabBarController.h"
 
 @implementation UINavigationController (AKTabBarController)
 
 - (NSString *)tabImageName
 {
-	return [[self.viewControllers objectAtIndex:0] tabImageName];
+	return [(self.viewControllers)[0] tabImageName];
+}
+
+- (NSString *)activeTabImageName
+{
+  return [(self.viewControllers)[0] activeTabImageName];
+}
+
+- (NSString *)tabBackgroundImageName
+{
+    return [(self.viewControllers)[0] tabBackgroundImageName];
 }
 
 - (NSString *)tabTitle
 {
-	return [[self.viewControllers objectAtIndex:0] tabTitle];
+	return [(self.viewControllers)[0] tabTitle];
+}
+
+- (AKTabBarController *)akTabBarController
+{
+    UIViewController *parent = self.parentViewController;
+    Class cls = [AKTabBarController class];
+    while(parent) {
+        if([parent isKindOfClass:cls]) {
+            return (AKTabBarController*) parent;
+        }
+        parent = parent.parentViewController;
+    }
+    
+    return nil;
 }
 
 @end

@@ -9,6 +9,16 @@
 #import "UIDevice+SystemInfo.h"
 
 @implementation UIDevice (SystemInfo)
+
++ (NSString *)SystemVersion
+{
+#if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+	return [UIDevice currentDevice].systemVersion;
+#else	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+	return nil;
+#endif	// #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)
+}
+
 + (NSString *)OSVersion
 {
 #if (TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR)

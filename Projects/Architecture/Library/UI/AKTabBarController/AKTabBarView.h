@@ -27,4 +27,5 @@
 @property (nonatomic, strong) AKTabBar *tabBar;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, assign) BOOL isTabBarHidding;
+@property (nonatomic, assign) AKTabBarPosition tabBarPosition;
 @end

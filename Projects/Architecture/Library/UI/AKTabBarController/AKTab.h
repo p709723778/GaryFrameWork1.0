@@ -27,11 +27,17 @@
 // Image used to draw the icon.
 @property (nonatomic, strong) NSString *tabImageWithName;
 
+// Image used to draw the icon when the tab is active
+@property (nonatomic, strong) NSString *activeImageWithName;
+
 // Tab background image
 @property (nonatomic, strong) NSString *backgroundImageName;
 
 // Tab selected background image
 @property (nonatomic, strong) NSString *selectedBackgroundImageName;
+
+// Tab background image insets
+@property (nonatomic) UIEdgeInsets backgroundImageCapInsets;
 
 // Tab text color
 @property (nonatomic, strong) UIColor *textColor;
@@ -39,17 +45,32 @@
 // Tab selected text color
 @property (nonatomic, strong) UIColor *selectedTextColor;
 
-// Tabs title.
+// Tabs title
 @property (nonatomic, strong) NSString *tabTitle;
 
-// Tabs icon colors.
+// Tabs title font
+@property (nonatomic, strong) UIFont *tabTitleFont;
+
+// Tabs icon colors
 @property (nonatomic, strong) NSArray *tabIconColors;
 
-// Tabs selected icon colors.
+// Tabs selected icon colors
 @property (nonatomic, strong) NSArray *tabIconColorsSelected;
+
+// Tabs outer glow icon color
+@property (nonatomic, strong) UIColor *tabIconOuterGlowColorSelected;
+
+// Tabs icon shadow color
+@property (nonatomic, strong) UIColor *tabIconShadowColor;
+
+// Tabs icon shadow offset
+@property (nonatomic) CGSize tabIconShadowOffset;
 
 // Tabs selected colors.
 @property (nonatomic, strong) NSArray *tabSelectedColors;
+
+// Tabs icon pre-rendered yes / no
+@property (nonatomic, assign) BOOL tabIconPreRendered;
 
 // Tabs icon glossy show / hide
 @property (nonatomic, assign) BOOL glossyIsHidden;
@@ -57,8 +78,14 @@
 // Tab stroke Color
 @property (nonatomic, strong) UIColor *strokeColor;
 
+// Tab inner stroke Color
+@property (nonatomic, strong) UIColor *innerStrokeColor;
+
 // Tab top embos Color
 @property (nonatomic, strong) UIColor *edgeColor;
+
+// Top embos Color. optional, default to edgeColor
+@property (nonatomic, strong) UIColor *topEdgeColor;
 
 // Height of the tab bar.
 @property (nonatomic, assign) CGFloat tabBarHeight;
@@ -69,4 +96,6 @@
 // Used to show / hide title.
 @property (nonatomic, assign) BOOL titleIsHidden;
 
+- (void)drawBackground:(CGContextRef)ctx
+                inRect:(CGRect)rect;
 @end

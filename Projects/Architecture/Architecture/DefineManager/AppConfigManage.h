@@ -15,6 +15,7 @@
 #ifndef Architecture_AppConfigManage_h
 #define Architecture_AppConfigManage_h
 
+//-------------------获取设备大小-------------------------
 #pragma mark - 获取设备不同部位的高度
 
 //获取屏幕高度(包含状态栏,导航栏,选项卡等),即:整个屏幕的高度 
@@ -30,10 +31,17 @@
 #define MainHeight (ScreenHeight - StateBarHeight)//减去状态栏屏幕高度
 #define MainWidth ScreenWidth//主屏宽度
 
+//-------------------获取设备大小-------------------------
+
+
 #pragma mark - 获取系统Documents目录
 #define systemDocuments  [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 
 
+
+//-------------------打印日志-------------------------
+
+/*前两个打印日志宏定义  第一个是发布版本时屏蔽日志所用,第二个是在Debug模式下打印日志和当前行数*/
 #pragma mark - 调试模式下输入NSLog，发布后不再输入
 
 #ifndef __OPTIMIZE__
@@ -43,14 +51,94 @@
 #endif
 
 
+//重写NSLog,Debug模式下打印日志和当前行数
 
-#pragma mark -判断是否为 ARC  在非ARC模式下 自定义内存释放 多了一个把变量置nil的步骤
+//#if DEBUG
+//#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s line:%d content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//#else
+//#define NSLog(FORMAT, ...) nil
+//#endif
 
-#if __has_feature(objc_arc)
-//compiling with ARC
+//DEBUG  模式下打印日志,当前行
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-#define kSafeRelease(object)    [object release];  object=nil
+#   define DLog(...)
 #endif
+
+//DEBUG  模式下打印日志,当前行 并弹出一个警告
+#ifdef DEBUG
+#   define ULog(fmt, ...)  { UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"%s\n [Line %d] ", __PRETTY_FUNCTION__, __LINE__] message:[NSString stringWithFormat:fmt, ##__VA_ARGS__]  delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil]; [alert show]; }
+#else
+#   define ULog(...)
+#endif
+
+#define ITTDEBUG
+#define ITTLOGLEVEL_INFO     10
+#define ITTLOGLEVEL_WARNING  3
+#define ITTLOGLEVEL_ERROR    1
+
+#ifndef ITTMAXLOGLEVEL
+
+#ifdef DEBUG
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_INFO
+#else
+#define ITTMAXLOGLEVEL ITTLOGLEVEL_ERROR
+#endif
+
+#endif
+
+// The general purpose logger. This ignores logging levels.
+#ifdef ITTDEBUG
+#define ITTDPRINT(xx, ...)  NSLog(@"%s(%d): " xx, __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define ITTDPRINT(xx, ...)  ((void)0)
+#endif
+
+// Prints the current method's name.
+#define ITTDPRINTMETHODNAME() ITTDPRINT(@"%s", __PRETTY_FUNCTION__)
+
+// Log-level based logging macros.
+#if ITTLOGLEVEL_ERROR <= ITTMAXLOGLEVEL
+#define ITTDERROR(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDERROR(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_WARNING <= ITTMAXLOGLEVEL
+#define ITTDWARNING(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDWARNING(xx, ...)  ((void)0)
+#endif
+
+#if ITTLOGLEVEL_INFO <= ITTMAXLOGLEVEL
+#define ITTDINFO(xx, ...)  ITTDPRINT(xx, ##__VA_ARGS__)
+#else
+#define ITTDINFO(xx, ...)  ((void)0)
+#endif
+
+#ifdef ITTDEBUG
+#define ITTDCONDITIONLOG(condition, xx, ...) { if ((condition)) { \
+ITTDPRINT(xx, ##__VA_ARGS__); \
+} \
+} ((void)0)
+#else
+#define ITTDCONDITIONLOG(condition, xx, ...) ((void)0)
+#endif
+
+#define ITTAssert(condition, ...)                                       \
+do {                                                                      \
+if (!(condition)) {                                                     \
+[[NSAssertionHandler currentHandler]                                  \
+handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] \
+file:[NSString stringWithUTF8String:__FILE__]  \
+lineNumber:__LINE__                                  \
+description:__VA_ARGS__];                             \
+}                                                                       \
+} while(0)
+
+//---------------------打印日志--------------------------
+
 
 #pragma mark -该宏定义是让 AFNetworking支持4.3所定义
 

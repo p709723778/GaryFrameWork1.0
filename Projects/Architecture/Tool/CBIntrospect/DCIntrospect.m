@@ -780,7 +780,7 @@ id UITextInputTraits_valueForKey(id self, SEL _cmd, NSString *key)
 	{
 		self.frameView = [[DCFrameView alloc] initWithFrame:(CGRect){ CGPointZero, mainWindow.frame.size } delegate:self];
 #if ! CB_HAS_ARC
-        [self.frameView release];
+        [frameView release];
 #endif
 		[mainWindow addSubview:self.frameView];
 		self.frameView.alpha = 0.0f;

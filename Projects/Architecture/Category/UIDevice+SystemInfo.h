@@ -36,7 +36,10 @@
 
 @interface UIDevice (SystemInfo)
 
-//获取操作系统版本
+//获取操作系统版本号
++ (NSString *)SystemVersion;
+
+//获取操作系统版本 包括设备操作系统名称
 + (NSString *)OSVersion;
 
 /**

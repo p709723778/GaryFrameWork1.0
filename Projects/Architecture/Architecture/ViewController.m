@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIViewController+AKTabBarController.h"
 
 @interface ViewController ()
 {
@@ -22,9 +23,14 @@
 {
     self = [super init];
     if (self) {
-        self.title = @"Profile";
+        self.title = @"购彩大厅";
     }
     return self;
+}
+
+- (NSString *)tabTitle
+{
+	return self.title;
 }
 
 - (NSString *)tabImageName
@@ -32,13 +38,55 @@
 	return @"image-1";
 }
 
+- (NSString *)activeTabImageName
+{
+	return @"image-1-active";
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //rightBarButtonItem定义
+    UIButton *rigthBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 100.0, 62.0, 29.0)];
+    [rigthBtn setTitle:@" 资讯" forState:UIControlStateNormal];
+    [rigthBtn setImage:LoadImage(@"zixunBar@2x.png") forState:UIControlStateNormal];
+    [rigthBtn setBackgroundImage:ImageNamed(@"NavButton.png") forState:UIControlStateNormal];
+    [rigthBtn setBackgroundImage:ImageNamed(@"NavButtonPressed.png") forState:UIControlStateHighlighted];
+    [rigthBtn addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
+    rigthBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+    rigthBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    UIBarButtonItem *rigthBarItem = [[UIBarButtonItem alloc] initWithCustomView:rigthBtn];
+    self.navigationItem.rightBarButtonItem = rigthBarItem;
+    [rigthBarItem release];
+    [rigthBtn release];
+    
+    
+    //改变nav背景图片,此处if为兼容4.3而写
+    
+    UIImage *backgroundImage = ImageNamed(@"NavBar.png");  //获取图片
+    float systemVersion = [[UIDevice SystemVersion] floatValue];
+    
+    if(systemVersion >= 5.0)
+    {
+        [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];  //设置背景
+    }
+    else
+    {
+        [self.navigationController.navigationBar insertSubview:[[[UIImageView alloc] initWithImage:backgroundImage] autorelease] atIndex:1];
+    }
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon"]];
+    imageView.frame = CGRectMake(10, 5, 100, 30);
+    [self.navigationController.view addSubview:imageView];
+    [imageView release];
+    
     UIView *bgview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
     bgview.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bgview];
+    [bgview release];
+    
     lb1 = [[UILabel alloc] init];
     button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     lb1.text = NSLocalizedString(@"demo", @"lb1 name");

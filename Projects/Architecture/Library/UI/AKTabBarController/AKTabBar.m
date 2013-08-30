@@ -23,12 +23,15 @@
 #import "AKTabBar.h"
 
 static int kInterTabMargin = 1;
+static int kTopEdgeWidth   = 1;
 
 @implementation AKTabBar
 
 #pragma mark - Initialization
 
 - (id)initWithFrame:(CGRect)frame
+        fixedHeight:(BOOL)hasFixedHeight
+           position:(AKTabBarPosition)position
 {
     self = [super initWithFrame:frame];
     if (self) {
@@ -36,9 +39,17 @@ static int kInterTabMargin = 1;
         self.userInteractionEnabled = YES;
         self.contentMode = UIViewContentModeRedraw;
         self.opaque = YES;
-        self.autoresizingMask = (UIViewAutoresizingFlexibleWidth |
-                                 UIViewAutoresizingFlexibleHeight |
-                                 UIViewAutoresizingFlexibleTopMargin);
+        
+        int mask = UIViewAutoresizingFlexibleWidth;
+        if(!hasFixedHeight) {
+            mask |= UIViewAutoresizingFlexibleHeight;
+        }
+        if(position == AKTabBarPositionBottom) {
+            mask |= UIViewAutoresizingFlexibleTopMargin;
+        } else {
+            mask |= UIViewAutoresizingFlexibleBottomMargin;
+        }
+        self.autoresizingMask = mask;
     }
     return self;
 }
@@ -62,7 +73,8 @@ static int kInterTabMargin = 1;
     [self setNeedsLayout];
 }
 
-- (void)setSelectedTab:(AKTab *)selectedTab {
+- (void)setSelectedTab:(AKTab *)selectedTab
+{
     if (selectedTab != _selectedTab) {
         [_selectedTab setSelected:NO];
         _selectedTab = selectedTab;
@@ -74,6 +86,7 @@ static int kInterTabMargin = 1;
 
 - (void)tabSelected:(AKTab *)sender
 {
+    [self setNeedsDisplay];
     [_delegate tabBar:self didSelectTabAtIndex:[_tabs indexOfObject:sender]];
 }
 
@@ -84,11 +97,12 @@ static int kInterTabMargin = 1;
 {
     // Drawing the tab bar background
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
-	    
-    // fill ingthe background with a noise pattern
-    [[UIColor colorWithPatternImage:[UIImage imageNamed:_backgroundImageName ? _backgroundImageName : @"AKTabBarController.bundle/noise-pattern"]] set];
     
-    CGContextFillRect(ctx, rect);
+    // Draw individual backgrounds
+    for (AKTab *tab in _tabs) {
+        CGRect tabRect = CGRectMake(tab.frame.origin.x, kTopEdgeWidth, tab.frame.size.width, rect.size.height);
+        [tab drawBackground:ctx inRect:tabRect];
+    }
     
     // Drawing the gradient
     CGContextSaveGState(ctx);
@@ -97,7 +111,7 @@ static int kInterTabMargin = 1;
         size_t num_locations = 2;
         CGFloat locations[2] = {0.0, 1.0};
         CGFloat components[8] = {0.9, 0.9, 0.9, 1.0,    // Start color
-                                 0.2, 0.2, 0.2, 0.8};    // End color
+            0.2, 0.2, 0.2, 0.8};    // End color
         
         CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
         CGGradientRef gradient = _tabColors ? CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)_tabColors, locations) : CGGradientCreateWithColorComponents (colorSpace, components, locations, num_locations);
@@ -110,52 +124,74 @@ static int kInterTabMargin = 1;
     CGContextRestoreGState(ctx);
     
     // Drawing the top dark emboss
+    UIColor *topEdgeColor = _topEdgeColor;
+    if (!topEdgeColor) {
+        topEdgeColor = _edgeColor ?: [UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f];
+    }
+
     CGContextSaveGState(ctx);
     {
-        CGContextSetFillColorWithColor(ctx, _edgeColor ? [_edgeColor CGColor] : [[UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f] CGColor]);
-        CGContextFillRect(ctx, CGRectMake(0, 0, rect.size.width, 1));
+        CGContextSetFillColorWithColor(ctx, topEdgeColor.CGColor);
+        CGContextFillRect(ctx, CGRectMake(0, 0, rect.size.width, kTopEdgeWidth));
     }
     CGContextRestoreGState(ctx);
     
     // Drawing the top bright emboss
-    CGContextSaveGState(ctx);
-    {
-        CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
-        CGContextSetRGBFillColor(ctx, 0.9, 0.9, 0.9, 0.7);
-        CGContextFillRect(ctx, CGRectMake(0, 1, rect.size.width, 1));
-
+    if(topEdgeColor != [UIColor clearColor]) {
+        CGContextSaveGState(ctx);
+        {
+            CGContextSetBlendMode(ctx, kCGBlendModeOverlay);
+            CGContextSetRGBFillColor(ctx, 0.9, 0.9, 0.9, 0.7);
+            CGContextFillRect(ctx, CGRectMake(0, 1, rect.size.width, 1));
+        }
+        CGContextRestoreGState(ctx);
     }
-    CGContextRestoreGState(ctx);
-        
+    
     // Drawing the edge border lines
     CGContextSetFillColorWithColor(ctx, _edgeColor ? [_edgeColor CGColor] : [[UIColor colorWithRed:.1f green:.1f blue:.1f alpha:.8f] CGColor]);
-    for (AKTab *tab in _tabs)
-        CGContextFillRect(ctx, CGRectMake(tab.frame.origin.x - kInterTabMargin, 0, kInterTabMargin, rect.size.height));
+    for (AKTab *tab in _tabs) {
+        CGRect tabRect = CGRectMake(tab.frame.origin.x - kInterTabMargin, kTopEdgeWidth, kInterTabMargin, rect.size.height);
+        CGContextFillRect(ctx, tabRect);
+    }
     
 }
 
-- (void)layoutSubviews {
+- (void)layoutSubviews
+{
     [super layoutSubviews];
-
+    
     CGFloat screenWidth = self.bounds.size.width;
     
     CGFloat tabNumber = _tabs.count;
     
     // Calculating the tabs width.
-    CGFloat tabWidth = floorf(((screenWidth + 1) / tabNumber) - 1);
+    CGFloat tabWidth;
+    
+    CGRect rect = self.bounds;
+    
+	//Override the tab width if possible
+	if ([self tabWidth] > 0) {
+        tabWidth = [self tabWidth];
+        
+        //Calucate the starting x value, to center the buttons
+        rect.origin.x = (screenWidth - ([self tabWidth]*tabNumber))/2.0f;
+	}
+    else {
+        // Calculating the tabs width.
+        tabWidth = floorf(((screenWidth + 1) / tabNumber) - 1);
+    }
     
     // Because of the screen size, it is impossible to have tabs with the same
     // width. Therefore we have to increase each tab width by one until we spend
     // of the spaceLeft counter.
     CGFloat spaceLeft = screenWidth - (tabWidth * tabNumber) - (tabNumber - 1);
     
-    CGRect rect = self.bounds;
     rect.size.width = tabWidth;
-
+    
     CGFloat dTabWith;
-    
+	
     for (AKTab *tab in _tabs) {
-    
+        
         // Here is the code that increment the width until we use all the space left
         
         dTabWith = tabWidth;
@@ -174,7 +210,6 @@ static int kInterTabMargin = 1;
         [self addSubview:tab];
         rect.origin.x = tab.frame.origin.x + tab.frame.size.width;
     }
-    
 }
 
 @end

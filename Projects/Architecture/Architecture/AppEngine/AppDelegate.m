@@ -14,14 +14,21 @@
 #import "AppDelegateHelper.h"
 #import "CBIntrospect.h"
 
+
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "FourthViewController.h"
+
 @implementation AppDelegate
 
 AS_SINGLETON(AppDelegate)
 
 - (void)dealloc
 {
-    [_window release];
-    [_viewController release];
+    kSafeRelease(_window);
+    kSafeRelease(_viewController);
+    kSafeRelease(_tabBarController);
+    
     
     [super dealloc];
 }
@@ -47,22 +54,39 @@ AS_SINGLETON(AppDelegate)
     
     // If the device is an iPad, we make it taller.
     _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
+    
+    // Comment out the line above and uncomment the line below to show the tab bar at the top of the UI.
+    /*
+     _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50 position:AKTabBarPositionBottom];
+     */
+    
     [_tabBarController setMinimumHeightToDisplayTitle:40.0];
     
+    // If needed, disable the resizing when switching display orientations.
+    /*
+     [_tabBarController setTabBarHasFixedHeight:YES];
+     */
     
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_viewController];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[[ViewController alloc] init] autorelease]];
     navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
     
     [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
-                                           navigationController,nil]];
+                                           navigationController,
+                                           [[[SecondViewController alloc] init] autorelease],
+                                           [[[ThirdViewController alloc] init] autorelease],
+                                           [[[FourthViewController alloc] init] autorelease],nil]];
     
+    [navigationController release];
+    // Below you will find an example of the possible customizations, just uncomment the lines below
     
-    // Below you will find an example of possible customization, just uncomment the lines
+    // Tab background Image
+    [_tabBarController setBackgroundImageName:@"noise-dark-gray.png"];
+    [_tabBarController setSelectedBackgroundImageName:@"noise-dark-blue.png"];
     
     /*
-     // Tab background Image
-     [_tabBarController setBackgroundImageName:@"noise-dark-gray.png"];
-     [_tabBarController setSelectedBackgroundImageName:@"noise-dark-blue.png"];
+     // If needed, set cap insets for the background image
+     [_tabBarController setBackgroundImageCapInsets:UIEdgeInsetsMake(4, 4, 4, 4)];
      
      // Tabs top embos Color
      [_tabBarController setTabEdgeColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.8]];
@@ -81,21 +105,53 @@ AS_SINGLETON(AppDelegate)
      [_tabBarController setIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1],
      [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
      
+     // Icon Shadow
+     [_tabBarController setIconShadowColor:[UIColor blackColor]];
+     [_tabBarController setIconShadowOffset:CGSizeMake(0, 1)];
+     
      [_tabBarController setSelectedIconColors:@[[UIColor colorWithRed:174.0/255.0 green:174.0/255.0 blue:174.0/255.0 alpha:1],
      [UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1]]]; // MAX 2 Colors
+     
+     [_tabBarController setSelectedIconOuterGlowColor:[UIColor darkGrayColor]];
      
      // Text Color
      [_tabBarController setTextColor:[UIColor colorWithRed:157.0/255.0 green:157.0/255.0 blue:157.0/255.0 alpha:1.0]];
      [_tabBarController setSelectedTextColor:[UIColor colorWithRed:228.0/255.0 green:228.0/255.0 blue:228.0/255.0 alpha:1.0]];
      
+     // Text font
+     [_tabBarController setTextFont:[UIFont fontWithName:@"Chalkduster" size:14]];
+     
      // Hide / Show glossy on tab icons
      [_tabBarController setIconGlossyIsHidden:YES];
+     
+     // Enable / Disable pre-rendered image mode
+     [_tabBarController setTabIconPreRendered:NO];
      */
+    
+    // Uncomment the following lines to completely remove the border from all elements.
+    /*
+     [_tabBarController setTabEdgeColor:[UIColor clearColor]];
+     [_tabBarController setTabInnerStrokeColor:[UIColor clearColor]];
+     [_tabBarController setTabStrokeColor:[UIColor clearColor]];
+     [_tabBarController setTopEdgeColor:[UIColor clearColor]];
+     */
+    
+    // Uncomment the following to display centered image in the center of the tabbar, similar to Instagram.
+    /*
+     UIImage *img = [UIImage imageNamed:@"sample-center-image"];
+     UIImageView *bottomCenterView = [[UIImageView alloc] initWithImage:img];
+     CGRect rect = _tabBarController.view.frame;
+     bottomCenterView.frame = CGRectMake(rect.size.width/2 - img.size.width/2, rect.size.height - img.size.height,
+     img.size.width, img.size.height);
+     [_tabBarController.view addSubview:bottomCenterView];
+     */
+    
 
     
     
     self.viewController.view.backgroundColor = [UIColor mudColor];
     self.window.rootViewController = _tabBarController;
+    [_tabBarController release];
     [self.window makeKeyAndVisible];
     
 //UI调试工具加载  在模拟器模式下使用

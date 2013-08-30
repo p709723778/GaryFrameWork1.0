@@ -22,6 +22,13 @@
 
 #import "AKTab.h"
 
+// The various positions for the AKTabBar within the AKTabBarView.
+// The default position is AKTabBarPositionBottom.
+typedef NS_ENUM(NSInteger, AKTabBarPosition) {
+    AKTabBarPositionBottom = 0,
+    AKTabBarPositionTop,
+};
+
 @class AKTabBar;
 
 @protocol AKTabBarDelegate <NSObject>
@@ -35,6 +42,10 @@
 
 @interface AKTabBar : UIView
 
+- (id)initWithFrame:(CGRect)frame
+        fixedHeight:(BOOL)hasFixedHeight
+           position:(AKTabBarPosition)position;
+
 @property (nonatomic, strong) NSArray *tabs;
 @property (nonatomic, strong) AKTab *selectedTab;
 @property (nonatomic, assign) id <AKTabBarDelegate> delegate;
@@ -42,11 +53,17 @@
 // Tab top embos Color
 @property (nonatomic, strong) UIColor *edgeColor;
 
+// Top embos Color. optional, default to edgeColor
+@property (nonatomic, strong) UIColor *topEdgeColor;
+
 // Tabs selected colors.
 @property (nonatomic, strong) NSArray *tabColors;
 
 // Tab background image
-@property (nonatomic, strong) NSString *backgroundImageName;
+//@property (nonatomic, strong) NSString *backgroundImageName;
+
+//
+@property (nonatomic, assign) CGFloat tabWidth;
 
 - (void)tabSelected:(AKTab *)sender;
 
