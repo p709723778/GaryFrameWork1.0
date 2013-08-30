@@ -16,5 +16,6 @@
 @property (retain, nonatomic) ViewController *viewController;
 
 @property (retain, nonatomic) AKTabBarController *tabBarController;
+@property (retain, nonatomic) UIImageView *splashView;
 
 @end

@@ -13,6 +13,10 @@
 		4E0FD24717D09FFF0039780A /* NavButtonPressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24517D09FFF0039780A /* NavButtonPressed@2x.png */; };
 		4E0FD24E17D0BDDB0039780A /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24D17D0BDDB0039780A /* digital-7.ttf */; };
 		4E0FD25017D0C1B40039780A /* NavLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD24F17D0C1B40039780A /* NavLogo@2x.png */; };
+		4E0FD25517D0C5570039780A /* icare_iphone_lightline.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD25117D0C5570039780A /* icare_iphone_lightline.png */; };
+		4E0FD25617D0C5570039780A /* icare_iphone_lightline@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD25217D0C5570039780A /* icare_iphone_lightline@2x.png */; };
+		4E0FD25717D0C5570039780A /* icare_iphone_lightpoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD25317D0C5570039780A /* icare_iphone_lightpoint.png */; };
+		4E0FD25817D0C5570039780A /* icare_iphone_lightpoint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E0FD25417D0C5570039780A /* icare_iphone_lightpoint@2x.png */; };
 		4E758E0217AE91B00000916E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E758E0417AE91B00000916E /* Localizable.strings */; };
 		4E758E1117AEA3100000916E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E758E1017AEA3100000916E /* Reachability.m */; };
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
@@ -137,6 +141,10 @@
 		4E0FD24517D09FFF0039780A /* NavButtonPressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavButtonPressed@2x.png"; sourceTree = "<group>"; };
 		4E0FD24D17D0BDDB0039780A /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		4E0FD24F17D0C1B40039780A /* NavLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavLogo@2x.png"; sourceTree = "<group>"; };
+		4E0FD25117D0C5570039780A /* icare_iphone_lightline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icare_iphone_lightline.png; sourceTree = "<group>"; };
+		4E0FD25217D0C5570039780A /* icare_iphone_lightline@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icare_iphone_lightline@2x.png"; sourceTree = "<group>"; };
+		4E0FD25317D0C5570039780A /* icare_iphone_lightpoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icare_iphone_lightpoint.png; sourceTree = "<group>"; };
+		4E0FD25417D0C5570039780A /* icare_iphone_lightpoint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icare_iphone_lightpoint@2x.png"; sourceTree = "<group>"; };
 		4E758DF817AE8DAE0000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		4E758E0317AE91B00000916E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -450,6 +458,10 @@
 		4E9EB87B17B220B8002CAD96 /* iPhone_Logo */ = {
 			isa = PBXGroup;
 			children = (
+				4E0FD25117D0C5570039780A /* icare_iphone_lightline.png */,
+				4E0FD25217D0C5570039780A /* icare_iphone_lightline@2x.png */,
+				4E0FD25317D0C5570039780A /* icare_iphone_lightpoint.png */,
+				4E0FD25417D0C5570039780A /* icare_iphone_lightpoint@2x.png */,
 				4E9EB87C17B220B8002CAD96 /* Default-568h@2x.png */,
 				4E9EB87D17B220B8002CAD96 /* Default.png */,
 				4E9EB87E17B220B8002CAD96 /* Default@2x.png */,
@@ -957,6 +969,10 @@
 				4E0FD24717D09FFF0039780A /* NavButtonPressed@2x.png in Resources */,
 				4E0FD24E17D0BDDB0039780A /* digital-7.ttf in Resources */,
 				4E0FD25017D0C1B40039780A /* NavLogo@2x.png in Resources */,
+				4E0FD25517D0C5570039780A /* icare_iphone_lightline.png in Resources */,
+				4E0FD25617D0C5570039780A /* icare_iphone_lightline@2x.png in Resources */,
+				4E0FD25717D0C5570039780A /* icare_iphone_lightpoint.png in Resources */,
+				4E0FD25817D0C5570039780A /* icare_iphone_lightpoint@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

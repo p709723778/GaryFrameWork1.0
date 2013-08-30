@@ -154,6 +154,10 @@ AS_SINGLETON(AppDelegate)
     [_tabBarController release];
     [self.window makeKeyAndVisible];
     
+    [self appLaunchingWithAnimation];
+
+    
+    
 //UI调试工具加载  在模拟器模式下使用
 #ifdef TARGET_IPHONE_SIMULATOR
     [[CBIntrospect sharedIntrospector] start];
@@ -166,6 +170,68 @@ AS_SINGLETON(AppDelegate)
 #endif
     
     return YES;
+}
+
+//启动液加载动画
+- (void)appLaunchingWithAnimation
+{
+    
+    CGFloat animateHeight = 310;
+    _splashView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    if ([UIDevice isPhoneRetina4]) {
+        [_splashView setImage:[UIImage imageNamed:@"Default-568h"]];
+        animateHeight = 400;
+    }
+    else
+    {
+        [_splashView setImage:[UIImage imageNamed:@"Default"]];
+        animateHeight = 380;
+    }
+    
+    
+    
+    [self.window addSubview:_splashView];
+    [self.window bringSubviewToFront:_splashView];
+    
+    UIImageView *lightpoint = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icare_iphone_lightpoint"]];
+    //    lightpoint.layer.shadowColor = [UIColor whiteColor].CGColor;
+    
+    UIImageView *lightline = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"icare_iphone_lightline"]];
+    
+    
+    [lightline setCenter:CGPointMake(160, animateHeight)];
+    [lightline setFrame:CGRectMake(lightline.frame.origin.x, lightline.frame.origin.y, 0, 1)];
+    
+    [lightpoint setCenter:CGPointMake(180, animateHeight)];
+    lightpoint.hidden= YES;
+    [_splashView addSubview:lightpoint];
+    
+    [_splashView addSubview:lightline];
+    [UIView animateWithDuration:0.6
+                          delay:0.0
+                        options:UIViewAnimationOptionAllowAnimatedContent
+                     animations:^{
+                         //                         [lightpoint setCenter:CGPointMake(233, 310)];
+                         [lightline setFrame:CGRectMake(lightline.frame.origin.x, lightline.frame.origin.y, 188, 1)];
+                     }
+                     completion:^(BOOL finished) {
+                         lightpoint.hidden= NO;
+                         [UIView animateWithDuration:0.6
+                                               delay:0.0
+                                             options:UIViewAnimationOptionAllowAnimatedContent
+                                          animations:^{
+                                              
+                                              [lightpoint setCenter:CGPointMake(233, animateHeight)];
+                                          }
+                                          completion:^(BOOL finished) {
+                                              
+                                              [_splashView removeFromSuperview];
+                                          }
+                          
+                          ];
+                     }
+     
+     ];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
