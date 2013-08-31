@@ -8,10 +8,11 @@
 
 #import "NSObject+JSON.h"
 
-static NSData * NSDataFromJSONObject(id object)
+static NSData *NSDataFromJSONObject(id object)
 {
     NSError *error = nil;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:&error];
+    NSData  *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:&error];
+
     return data;
 }
 
@@ -20,30 +21,28 @@ static NSData * NSDataFromJSONObject(id object)
 - (id)objectFromJSONString;
 {
     NSError *error = nil;
-    id object = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
+    id      object = [NSJSONSerialization JSONObjectWithData:[self dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
     return object;
 }
 
 @end
-
 
 @implementation NSDictionary (JSON)
 
 - (NSString *)JSONString;
 {
     NSData *data = NSDataFromJSONObject(self);
-    return (data ? [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil);
+    return [(data ?[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil)autorelease];
 }
 
 @end
-
 
 @implementation NSArray (JSON)
 
 - (NSString *)JSONString;
 {
     NSData *data = NSDataFromJSONObject(self);
-    return (data ? [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil);
+    return [(data ?[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] : nil)autorelease];
 }
 
 @end

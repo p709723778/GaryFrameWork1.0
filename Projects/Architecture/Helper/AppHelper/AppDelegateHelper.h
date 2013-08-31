@@ -8,10 +8,27 @@
 
 #import <Foundation/Foundation.h>
 
+@class AKTabBarController;
+
 @interface AppDelegateHelper : NSObject
 
 AS_SINGLETON(AppDelegateHelper);
 
 @property(assign, nonatomic)BOOL isFirst;
+
+/**
+ *	@brief	启动页加载动画
+ *
+ *	@param 	mainMindow 	程序主window界面
+ */
++ (void)appLaunchingWithAnimation:(UIWindow *)mainMindow;
+
+/**
+ *	@brief	TabBarController加载
+ *
+ *	@return	TabBarController
+ */
++(AKTabBarController *)loadTabBarController;
+
 
 @end
