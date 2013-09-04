@@ -12,16 +12,28 @@
 
 //账号检查
 + (BOOL)validateAccountWithString:(NSString*)strAccount;
+
 //账号检查是否为纯数字
 + (BOOL)validateAccountIsNumberWithString:(NSString*)strAccount;
+
 //密码检查
 + (BOOL)validatePasswordWithString:(NSString*)strPassword;
+
 //邮箱检查
 + (BOOL)validateEmailWithString:(NSString*)email;
+
 //身份证检查
 + (BOOL)validateIDWithString:(NSString*)strID;
+
 //手机号码检查
 + (BOOL)validateMobileWithString:(NSString*)strMobile;
+
+// 车牌号验证 MODIFIED BY HELENSONG
++ (BOOL)isValidateCarNo;
+
+// 网址验证
++ (BOOL)isValidateUrl;
+
 // 姓名检查
 + (BOOL)validateNameWithString:(NSString*)userName;
 
@@ -33,10 +45,13 @@
 
 //银行卡号
 + (BOOL)validateBankNumberWithString:(NSString*)bankNumber;
+
 //提现金额
 + (BOOL)validateWithDrawAmountWithString:(NSString*)withDrawAmount;
+
 // 开户银行
 + (BOOL)validateBankNameWithString:(NSString*)openBank;
+
 // 开户地区
 + (BOOL)validateBankRegionWithString:(NSString*)openAddress;
 

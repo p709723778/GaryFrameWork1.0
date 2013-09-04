@@ -53,9 +53,25 @@
 //手机号码检查
 + (BOOL)validateMobileWithString:(NSString*)strMobile
 {
-    NSString *mobileRegex = @"^(1(([35][0-9])|(47)|[8][0126789]))\\d{8}$";
+    NSString *mobileRegex = @"^((13[0-9])|(15[^4,\\D])|(18[0,0-9]))\\d{8}$";
     NSPredicate *mobilTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", mobileRegex];
     return [mobilTest evaluateWithObject:strMobile];
+}
+
+// 车牌号验证 MODIFIED BY HELENSONG
++ (BOOL)isValidateCarNo
+{
+    NSString *carRegex = @"^[A-Za-z]{1}[A-Za-z_0-9]{5}$";
+    NSPredicate *carTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",carRegex];
+    return [carTest evaluateWithObject:self];
+}
+
+// 网址验证
++ (BOOL)isValidateUrl
+{
+    NSString *urlRegex = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
+    NSPredicate *urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",urlRegex];
+    return [urlTest evaluateWithObject:self];
 }
 
 // 姓名检查

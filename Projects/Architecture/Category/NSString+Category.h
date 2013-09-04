@@ -15,4 +15,7 @@
 
 //float转换
 + (NSString *)floatToString:(float)f;
+
+/** 去掉两端空格和换行符 */
+- (NSString *)stringByTrimmingBlank;
 @end

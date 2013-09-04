@@ -22,4 +22,9 @@
     return [NSString stringWithFormat:@"%f",f];
 }
 
+- (NSString *)stringByTrimmingBlank
+{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
 @end
