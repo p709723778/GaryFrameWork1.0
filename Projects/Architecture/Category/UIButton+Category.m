@@ -16,6 +16,9 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    //kSystemSoundID_Vibrate系统震动
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
+    
     [[SoundManager sharedManager] playSound:@"tap.aif" looping:NO];
     [super touchesEnded:touches withEvent:event];
 }

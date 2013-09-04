@@ -23,6 +23,7 @@
 		4E8A3D7A17AD07C400F49E8D /* UIDevice+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */; };
 		4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */; };
 		4E8A3D8D17AE1A9500F49E8D /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */; };
+		4E90345917D704EF00C751D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E90345817D704EF00C751D6 /* AudioToolbox.framework */; };
 		4E9EB88317B220B8002CAD96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EB87C17B220B8002CAD96 /* Default-568h@2x.png */; };
 		4E9EB88417B220B8002CAD96 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EB87D17B220B8002CAD96 /* Default.png */; };
 		4E9EB88517B220B8002CAD96 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9EB87E17B220B8002CAD96 /* Default@2x.png */; };
@@ -164,6 +165,7 @@
 		4E8A3D8317AD0A7800F49E8D /* CategoryManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryManage.h; sourceTree = "<group>"; };
 		4E8A3D8B17AE1A9500F49E8D /* UIColor+Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colours.h"; sourceTree = "<group>"; };
 		4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
+		4E90345817D704EF00C751D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E9EB87C17B220B8002CAD96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4E9EB87D17B220B8002CAD96 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4E9EB87E17B220B8002CAD96 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E90345917D704EF00C751D6 /* AudioToolbox.framework in Frameworks */,
 				4EAC4BE517AE8070004A8E95 /* AVFoundation.framework in Frameworks */,
 				4EAC4BCD17AE73AD004A8E95 /* QuartzCore.framework in Frameworks */,
 				4EAC4B9417AE695C004A8E95 /* MobileCoreServices.framework in Frameworks */,
@@ -751,6 +754,7 @@
 		4EBB1ACB17ACBB0D0080ED23 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E90345817D704EF00C751D6 /* AudioToolbox.framework */,
 				4EAC4BE417AE8070004A8E95 /* AVFoundation.framework */,
 				4EAC4BCC17AE73AD004A8E95 /* QuartzCore.framework */,
 				4EAC4B9317AE695C004A8E95 /* MobileCoreServices.framework */,
