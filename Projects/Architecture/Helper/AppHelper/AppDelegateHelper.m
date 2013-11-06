@@ -103,7 +103,7 @@ DEF_SINGLETON(AppDelegateHelper);
 + (AKTabBarController *)loadTabBarController
 {
     // If the device is an iPad, we make it taller.
-    AKTabBarController *akTabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70:50];
+    AKTabBarController *akTabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
 
     // Comment out the line above and uncomment the line below to show the tab bar at the top of the UI.
 
