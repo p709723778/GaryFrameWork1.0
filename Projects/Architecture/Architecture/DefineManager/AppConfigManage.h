@@ -15,6 +15,11 @@
 #ifndef Architecture_AppConfigManage_h
 #define Architecture_AppConfigManage_h
 
+#pragma mark - 获取屏幕分辨率
+
+#define dWidth [UIScreen mainScreen].currentMode.size.width
+#define dheight [UIScreen mainScreen].currentMode.size.height
+
 //-------------------获取设备大小-------------------------
 #pragma mark - 获取设备不同部位的高度
 
@@ -23,7 +28,6 @@
 
 //获取屏幕宽度 即:整屏的宽度
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
-
 
 #define StateBarHeight 20//获取状态栏的高度
 #define NavBarHeight   44  //导航栏高度
