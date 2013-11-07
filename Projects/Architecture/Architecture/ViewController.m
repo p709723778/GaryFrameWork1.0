@@ -63,11 +63,21 @@
     [rigthBtn release];
     
     
-    //改变nav背景图片,此处if为兼容4.3而写
-    
-    UIImage *backgroundImage = ImageNamed(@"NavBar.png");  //获取图片
+    //获取当前操作系统版本好
     float systemVersion = [[UIDevice SystemVersion] floatValue];
     
+    UIImage *backgroundImage = nil;
+    
+    //兼容IOS7的Nav
+    if (systemVersion >= 7.0) {
+        backgroundImage = ImageNamed(@"NavBar64.png");
+    }
+    else
+    {
+        ImageNamed(@"NavBar.png");  //获取图片
+    }
+    
+    //改变nav背景图片,此处if为兼容4.3而写
     if(systemVersion >= 5.0)
     {
         [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsDefault];  //设置背景
@@ -79,11 +89,11 @@
     
     //navLogo 定义
     UIImageView *imageView = [[UIImageView alloc] initWithImage:LoadImage(@"NavLogo@2x.png")];
-    imageView.frame = CGRectMake(5, 0, 18, 44);
+    imageView.frame = CGRectMake(5, 20, 18, 44);
     [self.navigationController.view addSubview:imageView];
     [imageView release];
     
-    UIView *bgview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    UIView *bgview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MainWidth, MainHeight)];
     bgview.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:bgview];
     [bgview release];
