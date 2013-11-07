@@ -74,7 +74,7 @@
     }
     else
     {
-        ImageNamed(@"NavBar.png");  //获取图片
+        backgroundImage = ImageNamed(@"NavBar.png");  //获取图片
     }
     
     //改变nav背景图片,此处if为兼容4.3而写
