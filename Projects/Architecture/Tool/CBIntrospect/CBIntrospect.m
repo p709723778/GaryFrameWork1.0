@@ -193,6 +193,7 @@ static BOOL gListenForRemoteNotifications = NO;
         
         //TODO: write the response back to the client
 
+        CB_Release(jsonString);
         CB_Release(invocationResult);
     }
     else if ([messageTypeString isEqualToString:kCBMessageTypeRemoteNotification] && gListenForRemoteNotifications)
@@ -216,7 +217,7 @@ static BOOL gListenForRemoteNotifications = NO;
                 [application.delegate application:application didReceiveRemoteNotification:dictionary];
         }
     }
-    CB_Release(jsonString);
+    
     // remove the file after it has been used/read
     return [[NSFileManager defaultManager] removeItemAtPath:messageFilePath error:nil];
 }
