@@ -1,5 +1,5 @@
 //
-//  DefineImport.h
+//  DefineFileManager.h
 //  Architecture
 //
 //  Created by 蒲晓涛 on 8/3/13.
@@ -8,12 +8,12 @@
 
 /**
  *	@brief	宏定义导入头文件
- *  DefineImport.h 是一个宏定义集合
+ *  DefineFileManager.h 是一个宏定义集合
  */
 
 
-#ifndef Architecture_DefineImport_h
-#define Architecture_DefineImport_h
+#ifndef Architecture_DefineFileManager_h
+#define Architecture_DefineFileManager_h
 
 #import "APIManage.h"
 #import "AppConfigManage.h"
