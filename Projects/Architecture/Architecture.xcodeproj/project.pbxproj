@@ -179,10 +179,6 @@
 		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E758E0F17AEA3100000916E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4E758E1017AEA3100000916E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		4E8A3D5E17ACC45500F49E8D /* DefineImport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineImport.h; sourceTree = "<group>"; };
-		4E8A3D6217ACCD6200F49E8D /* AppConfigManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfigManage.h; sourceTree = "<group>"; };
-		4E8A3D6317ACDC9100F49E8D /* RequestAddressManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestAddressManage.h; sourceTree = "<group>"; };
-		4E8A3D6417ACE36B00F49E8D /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		4E8A3D7017ACF37400F49E8D /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		4E8A3D7117ACF37400F49E8D /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		4E8A3D7317ACF65900F49E8D /* Vendor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vendor.h; sourceTree = "<group>"; };
@@ -190,7 +186,7 @@
 		4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SystemInfo.m"; sourceTree = "<group>"; };
 		4E8A3D8017AD097100F49E8D /* GaryPersonalLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaryPersonalLog.h; sourceTree = "<group>"; };
 		4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaryPersonalLog.m; sourceTree = "<group>"; };
-		4E8A3D8317AD0A7800F49E8D /* CategoryManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryManage.h; sourceTree = "<group>"; };
+		4E8A3D8317AD0A7800F49E8D /* CategoryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryManager.h; sourceTree = "<group>"; };
 		4E8A3D8B17AE1A9500F49E8D /* UIColor+Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Colours.h"; sourceTree = "<group>"; };
 		4E8A3D8C17AE1A9500F49E8D /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
 		4E90345817D704EF00C751D6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -336,10 +332,14 @@
 		4EBB1AFD17ACBB0D0080ED23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EBB1AFF17ACBB0D0080ED23 /* ArchitectureTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchitectureTests.h; sourceTree = "<group>"; };
 		4EBB1B0017ACBB0D0080ED23 /* ArchitectureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchitectureTests.m; sourceTree = "<group>"; };
-		4EBB1B0C17ACBC2E0080ED23 /* APIManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManage.h; sourceTree = "<group>"; };
+		4EBE34CB183B6758001204E7 /* APIManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManage.h; sourceTree = "<group>"; };
+		4EBE34CC183B6758001204E7 /* AppConfigManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigManage.h; sourceTree = "<group>"; };
+		4EBE34CD183B6758001204E7 /* RequestAddressManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestAddressManage.h; sourceTree = "<group>"; };
+		4EBE34CE183B6758001204E7 /* ShorthandMethodManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShorthandMethodManage.h; sourceTree = "<group>"; };
+		4EBE34CF183B6758001204E7 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		4EBE34D0183B6758001204E7 /* DefineFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineFileManager.h; sourceTree = "<group>"; };
 		4ECD3F6617AE2F9C003B9B42 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		4ECD3F6717AE2F9C003B9B42 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
-		4ECD3F6917AE3269003B9B42 /* ShorthandMethodManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShorthandMethodManage.h; sourceTree = "<group>"; };
 		4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularVerification.h; sourceTree = "<group>"; };
 		4ECD3F7017AE366F003B9B42 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
 		4ECD3F7817AE466A003B9B42 /* iPad_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_View; sourceTree = "<group>"; };
@@ -392,14 +392,6 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
-		4E8A3D5D17ACC42E00F49E8D /* DefineImportManager */ = {
-			isa = PBXGroup;
-			children = (
-				4E8A3D5E17ACC45500F49E8D /* DefineImport.h */,
-			);
-			path = DefineImportManager;
-			sourceTree = "<group>";
-		};
 		4E8A3D6D17ACF33100F49E8D /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,7 +424,7 @@
 		4E8A3D7717AD07A800F49E8D /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				4E8A3D8317AD0A7800F49E8D /* CategoryManage.h */,
+				4E8A3D8317AD0A7800F49E8D /* CategoryManager.h */,
 				4E8A3D7817AD07C400F49E8D /* UIDevice+SystemInfo.h */,
 				4E8A3D7917AD07C400F49E8D /* UIDevice+SystemInfo.m */,
 				4E8A3D8B17AE1A9500F49E8D /* UIColor+Colours.h */,
@@ -815,8 +807,8 @@
 		4EBB1AD217ACBB0D0080ED23 /* Architecture */ = {
 			isa = PBXGroup;
 			children = (
+				4EBE34C9183B6758001204E7 /* DefineManager */,
 				4EBB1B0A17ACBBAD0080ED23 /* AppEngine */,
-				4EBB1B0B17ACBBAD0080ED23 /* DefineManager */,
 				4EBB1AE417ACBB0D0080ED23 /* ViewController.h */,
 				4EBB1AE517ACBB0D0080ED23 /* ViewController.m */,
 				4EBB1AE717ACBB0D0080ED23 /* ViewController_iPhone.xib */,
@@ -869,17 +861,25 @@
 			path = AppEngine;
 			sourceTree = "<group>";
 		};
-		4EBB1B0B17ACBBAD0080ED23 /* DefineManager */ = {
+		4EBE34C9183B6758001204E7 /* DefineManager */ = {
 			isa = PBXGroup;
 			children = (
-				4E8A3D5D17ACC42E00F49E8D /* DefineImportManager */,
-				4EBB1B0C17ACBC2E0080ED23 /* APIManage.h */,
-				4E8A3D6317ACDC9100F49E8D /* RequestAddressManage.h */,
-				4E8A3D6217ACCD6200F49E8D /* AppConfigManage.h */,
-				4E8A3D6417ACE36B00F49E8D /* Singleton.h */,
-				4ECD3F6917AE3269003B9B42 /* ShorthandMethodManage.h */,
+				4EBE34CA183B6758001204E7 /* DefineFile */,
+				4EBE34D0183B6758001204E7 /* DefineFileManager.h */,
 			);
 			path = DefineManager;
+			sourceTree = "<group>";
+		};
+		4EBE34CA183B6758001204E7 /* DefineFile */ = {
+			isa = PBXGroup;
+			children = (
+				4EBE34CB183B6758001204E7 /* APIManage.h */,
+				4EBE34CC183B6758001204E7 /* AppConfigManage.h */,
+				4EBE34CD183B6758001204E7 /* RequestAddressManage.h */,
+				4EBE34CE183B6758001204E7 /* ShorthandMethodManage.h */,
+				4EBE34CF183B6758001204E7 /* Singleton.h */,
+			);
+			path = DefineFile;
 			sourceTree = "<group>";
 		};
 		4ECD3F6B17AE34ED003B9B42 /* Tool */ = {

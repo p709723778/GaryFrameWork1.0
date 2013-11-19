@@ -17,7 +17,7 @@
 
 #import "APIManage.h"
 #import "AppConfigManage.h"
-#import "CategoryManage.h"
+#import "CategoryManager.h"
 #import "ShorthandMethodManage.h"
 
 

@@ -15,7 +15,7 @@
         #import <Foundation/Foundation.h>
         #import <SystemConfiguration/SystemConfiguration.h>
         #import <MobileCoreServices/MobileCoreServices.h>
-        #import "DefineImport.h"
+        #import "DefineFileManager.h"
     #endif
 #else
     #ifdef __OBJC__
