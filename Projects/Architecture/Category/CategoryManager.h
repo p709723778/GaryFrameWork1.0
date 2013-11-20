@@ -12,5 +12,6 @@
 #import "UIDevice+SystemInfo.h"
 #import "UIColor+Colours.h"
 #import "NSString+Category.h"
+#import "NSString+MD5.h"
 
 #endif

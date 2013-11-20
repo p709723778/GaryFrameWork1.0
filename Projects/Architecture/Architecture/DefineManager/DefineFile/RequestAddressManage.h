@@ -18,7 +18,7 @@
 
 #pragma mark -用户登陆
 
-#define Server_Action_UserLogin [NSString stringWithFormat:@"/?c=api_user&a=login&callType=%@&Y-KEY=%@",SERVER_RETURN_FORMAT, Operate_KEY]
+#define Server_Action_UserLogin [NSString stringWithFormat:@"/?c=api_user&a=login&callType=%@&Y-KEY=%@",SERVER_RETURN_FORMAT, Operate_KEY.md5Encrypt]
 
 
 #endif

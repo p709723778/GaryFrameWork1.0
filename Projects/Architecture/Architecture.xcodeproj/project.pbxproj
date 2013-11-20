@@ -31,6 +31,7 @@
 		4E3FB0B6182B36DD00E1244E /* UISplitViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3FB0B5182B36DD00E1244E /* UISplitViewController+AKTabBarController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		4E758E0217AE91B00000916E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E758E0417AE91B00000916E /* Localizable.strings */; };
 		4E758E1117AEA3100000916E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E758E1017AEA3100000916E /* Reachability.m */; };
+		4E88380A183C90CA00F45C13 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E883809183C90CA00F45C13 /* NSString+MD5.m */; };
 		4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D7117ACF37400F49E8D /* OpenUDID.m */; };
 		4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8A3D8117AD097100F49E8D /* GaryPersonalLog.m */; };
 		4E90345917D704EF00C751D6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E90345817D704EF00C751D6 /* AudioToolbox.framework */; };
@@ -180,6 +181,8 @@
 		4E758E0517AE91B40000916E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4E758E0F17AEA3100000916E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4E758E1017AEA3100000916E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		4E883808183C90CA00F45C13 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		4E883809183C90CA00F45C13 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		4E8A3D7017ACF37400F49E8D /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
 		4E8A3D7117ACF37400F49E8D /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
 		4E8A3D7317ACF65900F49E8D /* Vendor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vendor.h; sourceTree = "<group>"; };
@@ -852,6 +855,8 @@
 		4EC62613183C48920046EE43 /* CategoryFile */ = {
 			isa = PBXGroup;
 			children = (
+				4E883808183C90CA00F45C13 /* NSString+MD5.h */,
+				4E883809183C90CA00F45C13 /* NSString+MD5.m */,
 				4EC62614183C48920046EE43 /* NSString+Category.h */,
 				4EC62615183C48920046EE43 /* NSString+Category.m */,
 				4EC62616183C48920046EE43 /* UIButton+Category.h */,
@@ -1162,6 +1167,7 @@
 				4EC6261F183C48920046EE43 /* UIDevice+SystemInfo.m in Sources */,
 				4EAC4BCB17AE7395004A8E95 /* UIWindow+Introspector.m in Sources */,
 				4EAC4C0217AE82D8004A8E95 /* SoundManager.m in Sources */,
+				4E88380A183C90CA00F45C13 /* NSString+MD5.m in Sources */,
 				4E758E1117AEA3100000916E /* Reachability.m in Sources */,
 				4EB70F7817CF7AAD00884F37 /* AKTab.m in Sources */,
 				4EB70F7917CF7AAD00884F37 /* AKTabBar.m in Sources */,
