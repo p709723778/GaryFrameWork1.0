@@ -135,7 +135,7 @@
 		4EC6261D183C48920046EE43 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC62617183C48920046EE43 /* UIButton+Category.m */; };
 		4EC6261E183C48920046EE43 /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC62619183C48920046EE43 /* UIColor+Colours.m */; };
 		4EC6261F183C48920046EE43 /* UIDevice+SystemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC6261B183C48920046EE43 /* UIDevice+SystemInfo.m */; };
-		4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7017AE366F003B9B42 /* RegularVerification.m */; };
+		4ECCA800183C50E4009DC742 /* RegularVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ECCA7FF183C50E4009DC742 /* RegularVerification.m */; };
 		4ECD3F7917AE466A003B9B42 /* iPad_View in Resources */ = {isa = PBXBuildFile; fileRef = 4ECD3F7817AE466A003B9B42 /* iPad_View */; };
 /* End PBXBuildFile section */
 
@@ -340,8 +340,8 @@
 		4EC62619183C48920046EE43 /* UIColor+Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Colours.m"; sourceTree = "<group>"; };
 		4EC6261A183C48920046EE43 /* UIDevice+SystemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+SystemInfo.h"; sourceTree = "<group>"; };
 		4EC6261B183C48920046EE43 /* UIDevice+SystemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+SystemInfo.m"; sourceTree = "<group>"; };
-		4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularVerification.h; sourceTree = "<group>"; };
-		4ECD3F7017AE366F003B9B42 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
+		4ECCA7FE183C50E4009DC742 /* RegularVerification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularVerification.h; sourceTree = "<group>"; };
+		4ECCA7FF183C50E4009DC742 /* RegularVerification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularVerification.m; sourceTree = "<group>"; };
 		4ECD3F7817AE466A003B9B42 /* iPad_View */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = iPad_View; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -763,7 +763,7 @@
 				4E8A3D7717AD07A800F49E8D /* Category */,
 				4EBB1AD217ACBB0D0080ED23 /* Architecture */,
 				4EAC4B9B17AE71BF004A8E95 /* Helper */,
-				4ECD3F6B17AE34ED003B9B42 /* Tool */,
+				4ECD3F6B17AE34ED003B9B42 /* Tools */,
 				4E8A3D7F17AD097000F49E8D /* GaryPersonaManage */,
 				4EBB1AF917ACBB0D0080ED23 /* ArchitectureTests */,
 				4EBB1ACB17ACBB0D0080ED23 /* Frameworks */,
@@ -890,14 +890,22 @@
 			path = CategoryFile;
 			sourceTree = "<group>";
 		};
-		4ECD3F6B17AE34ED003B9B42 /* Tool */ = {
+		4ECCA7FD183C50E4009DC742 /* RegularVerify */ = {
 			isa = PBXGroup;
 			children = (
-				4EAC4BA417AE7395004A8E95 /* CBIntrospect */,
-				4ECD3F6F17AE366F003B9B42 /* RegularVerification.h */,
-				4ECD3F7017AE366F003B9B42 /* RegularVerification.m */,
+				4ECCA7FE183C50E4009DC742 /* RegularVerification.h */,
+				4ECCA7FF183C50E4009DC742 /* RegularVerification.m */,
 			);
-			path = Tool;
+			path = RegularVerify;
+			sourceTree = "<group>";
+		};
+		4ECD3F6B17AE34ED003B9B42 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				4ECCA7FD183C50E4009DC742 /* RegularVerify */,
+				4EAC4BA417AE7395004A8E95 /* CBIntrospect */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1081,9 +1089,9 @@
 				4EBB1AE617ACBB0D0080ED23 /* ViewController.m in Sources */,
 				4E3FB0B6182B36DD00E1244E /* UISplitViewController+AKTabBarController.m in Sources */,
 				4EC6261E183C48920046EE43 /* UIColor+Colours.m in Sources */,
+				4ECCA800183C50E4009DC742 /* RegularVerification.m in Sources */,
 				4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */,
 				4E8A3D8217AD097100F49E8D /* GaryPersonalLog.m in Sources */,
-				4ECD3F7217AE3719003B9B42 /* RegularVerification.m in Sources */,
 				4EAC4B8417AE6715004A8E95 /* AFHTTPClient.m in Sources */,
 				4EAC4B8517AE6715004A8E95 /* AFHTTPRequestOperation.m in Sources */,
 				4EC6261D183C48920046EE43 /* UIButton+Category.m in Sources */,
