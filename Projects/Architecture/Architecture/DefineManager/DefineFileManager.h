@@ -16,11 +16,10 @@
 #define Architecture_DefineFileManager_h
 
 #import "APIManage.h"
+#import "RequestAddressManage.h"
 #import "AppConfigManage.h"
 #import "CategoryManager.h"
 #import "ShorthandMethodManage.h"
-
-
 #import "Singleton.h"
 
 #endif

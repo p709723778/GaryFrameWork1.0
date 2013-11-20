@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Gary. All rights reserved.
 //
 
-#import "RequestAddressManage.h"
+
 
 /************************************
  *
@@ -45,4 +45,33 @@
  */
 
 #define SERVER_API(Action_API) [NSString stringWithFormat:@"%@%@",ServerAddress,Action_API]
+
+
+
+
+
+#pragma mark -服务器返回数据格式类型设置
+
+//向服务器请求返回格式编号
+#define SERVER_RETURN_FORMAT_NUMBER 1
+
+#if (SERVER_RETURN_FORMAT_NUMBER == 1) //返回XML格式的数据
+#define SERVER_RETURN_FORMAT @"XML"
+
+#elif (SERVER_RETURN_FORMAT_NUMBER == 2) //返回JSON格式的数据
+#define SERVER_RETURN_FORMAT @"JSON"
+#endif
+
+
+
+#pragma mark -用户使用到的Key定义
+
+//用户操作Key
+#define Operate_KEY @"jucai"
+
+//用户支付Key
+#define Pay_Key @"jucaipay"
+
+//用户投注Key
+#define Lottery_Key @"jucai0113"
 
