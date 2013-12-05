@@ -127,6 +127,7 @@
 		4EBB1AF617ACBB0D0080ED23 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB1ACE17ACBB0D0080ED23 /* Foundation.framework */; };
 		4EBB1AFE17ACBB0D0080ED23 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4EBB1AFC17ACBB0D0080ED23 /* InfoPlist.strings */; };
 		4EBB1B0117ACBB0D0080ED23 /* ArchitectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBB1B0017ACBB0D0080ED23 /* ArchitectureTests.m */; };
+		4EBBE2E118505444004AD2E3 /* JSONUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBBE2E018505444004AD2E3 /* JSONUtility.m */; };
 		4EC6261C183C48920046EE43 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC62615183C48920046EE43 /* NSString+Category.m */; };
 		4EC6261D183C48920046EE43 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC62617183C48920046EE43 /* UIButton+Category.m */; };
 		4EC6261E183C48920046EE43 /* UIColor+Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC62619183C48920046EE43 /* UIColor+Colours.m */; };
@@ -322,6 +323,8 @@
 		4EBB1AFD17ACBB0D0080ED23 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4EBB1AFF17ACBB0D0080ED23 /* ArchitectureTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchitectureTests.h; sourceTree = "<group>"; };
 		4EBB1B0017ACBB0D0080ED23 /* ArchitectureTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchitectureTests.m; sourceTree = "<group>"; };
+		4EBBE2DF18505444004AD2E3 /* JSONUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONUtility.h; sourceTree = "<group>"; };
+		4EBBE2E018505444004AD2E3 /* JSONUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONUtility.m; sourceTree = "<group>"; };
 		4EBE34CB183B6758001204E7 /* APIManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManage.h; sourceTree = "<group>"; };
 		4EBE34CC183B6758001204E7 /* AppConfigManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigManage.h; sourceTree = "<group>"; };
 		4EBE34CD183B6758001204E7 /* RequestAddressManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestAddressManage.h; sourceTree = "<group>"; };
@@ -822,6 +825,7 @@
 		4EBB1B0A17ACBBAD0080ED23 /* AppEngine */ = {
 			isa = PBXGroup;
 			children = (
+				4EBBE2DD18505444004AD2E3 /* Utility */,
 				4ECCA989183C5F88009DC742 /* Controller */,
 				4ECCA98A183C5F88009DC742 /* Model */,
 				4ECCA98B183C5F88009DC742 /* View */,
@@ -829,6 +833,23 @@
 				4EBB1ADC17ACBB0D0080ED23 /* AppDelegate.m */,
 			);
 			path = AppEngine;
+			sourceTree = "<group>";
+		};
+		4EBBE2DD18505444004AD2E3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4EBBE2DE18505444004AD2E3 /* JSON */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4EBBE2DE18505444004AD2E3 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				4EBBE2DF18505444004AD2E3 /* JSONUtility.h */,
+				4EBBE2E018505444004AD2E3 /* JSONUtility.m */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		4EBE34C9183B6758001204E7 /* DefineManager */ = {
@@ -1135,6 +1156,7 @@
 				4EBB1ADD17ACBB0D0080ED23 /* AppDelegate.m in Sources */,
 				4EBB1AE617ACBB0D0080ED23 /* ViewController.m in Sources */,
 				4E3FB0B6182B36DD00E1244E /* UISplitViewController+AKTabBarController.m in Sources */,
+				4EBBE2E118505444004AD2E3 /* JSONUtility.m in Sources */,
 				4EC6261E183C48920046EE43 /* UIColor+Colours.m in Sources */,
 				4ECCA800183C50E4009DC742 /* RegularVerification.m in Sources */,
 				4E8A3D7217ACF37400F49E8D /* OpenUDID.m in Sources */,
